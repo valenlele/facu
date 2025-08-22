@@ -1,0 +1,21 @@
+ORG 1000H
+  MAX DB 20
+  DIR DB ?
+
+ORG 2000H
+  MOV AL, MAX ;AL = MAX
+  MOV BX, OFFSET DIR ;puntero tabla
+  MOV CL, 0 ;CL = 0 . multiplos. se va incrementando de a 5
+
+  LOOP:
+    CMP AL, CL ;comparo CL con AL
+    JS FIN ;si no es cero guardo CL en [BX]. si es cero FIN
+    MOV [BX], CL
+    INC BX ;incremento posicion en memoria
+    ADD CL, 5 ;incremento CL en 5
+    JMP LOOP
+
+  FIN:
+
+HLT
+END

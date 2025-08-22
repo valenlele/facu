@@ -1,0 +1,109 @@
+programa ej1cClase5
+
+procesos
+
+  proceso tomarFlores(ES cantF:numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor 
+      cantF:=cantF+1
+  fin
+  
+  proceso recorrerYTomar(E alto:numero ; E ancho:numero ; ES cantF:numero)
+  comenzar
+    repetir 2
+      repetir alto
+        tomarFlores(cantF)
+        mover
+      derecha
+      repetir ancho
+        tomarFlores(cantF)
+        mover
+      derecha
+  fin
+  
+  proceso depositarEnEsq
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)  
+  fin
+  
+  proceso enviarEsqIzqInfPerimetro
+  comenzar
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(40,robot2)
+  fin
+  
+  proceso enviarAnchoAltoPerimetro
+  comenzar
+    EnviarMensaje(20,robot1)
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(20,robot2)
+    EnviarMensaje(15,robot2)
+  fin
+  
+areas
+  p1: AreaP (15,15,30,35)
+  p2: AreaP (40,40,55,60)
+  esq10: AreaC (10,10,10,10)
+  iR1: AreaP(2,2,2,2)
+  iR2: AreaP (6,6,6,6)
+  iJefe: AreaP (1,1,1,1)
+  
+robots
+  robot tipoR
+  variables
+    esq:numero
+    alto,ancho:numero
+    cantF:numero
+  comenzar 
+    cantF:=0
+    RecibirMensaje(esq,robotJ) {recibe esq inferior izq del perimetro a recorrer}
+    Pos(esq,esq)
+    RecibirMensaje(alto,robotJ)
+    RecibirMensaje(ancho,robotJ)  {recibe alto y ancho del perimetro a recorrer}
+    recorrerYTomar(alto,ancho,cantF)
+    EnviarMensaje(cantF,robotJ)
+    depositarEnEsq
+  fin
+  
+  robot tipoJ
+  variables
+    totF:numero
+    cantF:numero
+  comenzar
+    totF:=0
+    enviarEsqIzqInfPerimetro
+    enviarAnchoAltoPerimetro
+    repetir 2
+      RecibirMensaje(cantF,*)
+      totF:=totF+cantF
+    Informar(totF)
+  fin
+  
+variables
+  robot1:tipoR
+  robot2:tipoR
+  robotJ:tipoJ
+  
+comenzar
+  AsignarArea(robot1, p1)
+  AsignarArea(robot1,esq10)
+  AsignarArea(robot1,iR1)
+  AsignarArea(robot2, p2)
+  AsignarArea(robot2,esq10)
+  AsignarArea(robot2,iR2)
+  AsignarArea(robotJ,iJefe)
+  Iniciar(robot1, 2,2)
+  Iniciar(robot2, 6,6)
+  Iniciar(robotJ, 1,1)
+fin

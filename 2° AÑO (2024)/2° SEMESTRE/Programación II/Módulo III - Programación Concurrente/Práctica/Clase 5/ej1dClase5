@@ -1,0 +1,159 @@
+programa ej1dClase5
+
+procesos
+
+  proceso enviarIdentificacion
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+  fin
+
+  proceso tomarFlores(ES cantF:numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor 
+      cantF:=cantF+1
+  fin
+  
+  proceso recorrerYTomar(E alto:numero ; E ancho:numero; ES cantF:numero)
+  comenzar
+    repetir 2
+      repetir alto
+        tomarFlores(cantF)
+        mover
+      derecha
+      repetir ancho
+        tomarFlores(cantF)
+        mover
+      derecha
+  fin
+  
+  proceso depositarEnEsq
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)  
+  fin
+  
+  proceso enviarEsqIzqInfPerimetro
+  comenzar
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(40,robot2)
+  fin
+  
+  proceso enviarAnchoAltoPerimetro
+  comenzar
+    EnviarMensaje(20,robot1)
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(20,robot2)
+    EnviarMensaje(15,robot2)
+  fin
+  
+  proceso enviarPermiso(E quienSos:numero)
+  variables
+    permiso:boolean
+  comenzar
+    si quienSos=1
+      EnviarMensaje(permiso,robot1)
+    sino
+      EnviarMensaje(permiso,robot2)    
+  fin
+  
+  proceso recibirQueTermino(E quienSos:numero)
+  variables
+    termino:boolean
+  comenzar
+    si quienSos=1
+      RecibirMensaje(termino,robot1)
+    sino
+      RecibirMensaje(termino,robot2)
+  fin
+  
+  proceso contarFlores(ES totFlores:numero)
+  comenzar
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    tomarFlores(totFlores)
+    Pos(1,1)
+    LiberarEsquina(10,10)
+  fin
+  
+areas
+  p1: AreaP (15,15,30,35)
+  p2: AreaP (40,40,55,60)
+  esq10: AreaC (10,10,10,10)
+  iR1: AreaP(2,2,2,2)
+  iR2: AreaP (6,6,6,6)
+  iJefe: AreaP (1,1,1,1)
+  
+robots
+  robot tipoR
+  variables
+    quienSoy:numero
+    esq:numero
+    alto,ancho:numero
+    cantF:numero
+    permiso,termine:boolean
+  comenzar 
+    cantF:=0
+    RecibirMensaje(quienSoy,robotJ) {recibe identificacion}
+    RecibirMensaje(esq,robotJ) {recibe esq inferior izq del perimetro a recorrer}
+    Pos(esq,esq)
+    RecibirMensaje(alto,robotJ)
+    RecibirMensaje(ancho,robotJ)  {recibe alto y ancho del perimetro a recorrer}
+    recorrerYTomar(alto,ancho,cantF) {recorre avendia y toma flores}
+    EnviarMensaje(quienSoy,robotJ)    {avisa al jefe que termino}
+    RecibirMensaje(permiso,robotJ) {espera a recibir permiso para depositar}
+    depositarEnEsq
+    EnviarMensaje(termine,robotJ)
+  fin
+  
+  robot tipoJ
+  variables
+    totF:numero
+    quienSos:numero
+  comenzar
+    totF:=0
+    enviarIdentificacion
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+    Pos(1,1)
+    LiberarEsquina(10,10)
+    enviarEsqIzqInfPerimetro
+    enviarAnchoAltoPerimetro
+    repetir 2
+      RecibirMensaje(quienSos,*) {recibe identificacion de uno de los robots que termino}
+      enviarPermiso(quienSos)    {envia permiso a robot}
+      recibirQueTermino(quienSos)
+      contarFlores(totF)
+    Informar(totF)
+  fin
+  
+variables
+  robot1:tipoR
+  robot2:tipoR
+  robotJ:tipoJ
+  
+comenzar
+  AsignarArea(robot1, p1)
+  AsignarArea(robot1,esq10)
+  AsignarArea(robot1,iR1)
+  AsignarArea(robot2, p2)
+  AsignarArea(robot2,esq10)
+  AsignarArea(robot2,iR2)
+  AsignarArea(robotJ,esq10)
+  AsignarArea(robotJ,iJefe)
+  Iniciar(robot1, 2,2)
+  Iniciar(robot2, 6,6)
+  Iniciar(robotJ, 1,1)
+fin

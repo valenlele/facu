@@ -1,0 +1,73 @@
+programa ej5aClase5
+
+procesos
+  
+  proceso enviarMensajeRobots(E quienSoy:numero)
+  comenzar
+    si (quienSoy=1)
+      EnviarMensaje(1,robot2)
+      EnviarMensaje(1,robot3)
+    sino
+      si (quienSoy=2)
+        EnviarMensaje(1,robot1)
+        EnviarMensaje(1,robot3)
+      sino
+        si (quienSoy=3)
+          EnviarMensaje(1,robot1)
+          EnviarMensaje(1,robot2)
+  fin
+
+areas
+  av1: AreaP (1,1,1,100)
+  av2: AreaP (2,1,2,100)
+  av3: AreaP (3,1,3,100)
+  esqCoord: AreaP (100,100,100,100)
+  
+robots
+
+  robot tipoR
+  variables
+    quienSoy:numero
+    cantP:numero
+    cantPRandom:numero
+    tomePap:numero
+  comenzar  
+    RecibirMensaje(quienSoy,robCoord)  
+    mientras (PosCa<=99)
+      Random(cantPRandom,1,5)
+      Informar(cantPRandom)
+      mientras (PosCa<=99) & (cantP<=cantPRandom)
+        mientras (HayPapelEnLaEsquina) & (cantP<=cantPRandom)
+          tomarPapel
+          cantP:=cantP+1
+        si (cantP=cantPRandom)
+          cantP:=0
+          enviarMensajeRobots(quienSoy)
+          repetir 2
+            RecibirMensaje(tomePap,*)
+        mover
+  fin
+  
+  robot tipoCoord
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+  fin
+  
+variables
+  robot1:tipoR
+  robot2:tipoR
+  robot3:tipoR
+  robCoord:tipoCoord
+  
+comenzar
+  AsignarArea(robot1, av1)
+  AsignarArea(robot2, av2)
+  AsignarArea(robot3, av3)
+  AsignarArea(robCoord, esqCoord)
+  Iniciar(robot1, 1,1)
+  Iniciar(robot2, 2,1)
+  Iniciar(robot3, 3,1)
+  Iniciar(robCoord, 100,100)
+fin

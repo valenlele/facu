@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw3 -gl -l -vewnhibq &quot;-FiE:\valentino\facu\3° AÑO (2025)\1° SEMESTRE\Final Programacion II\Clase 3\lib\x86_64-win64&quot; &quot;-FuE:\valentino\facu\3° AÑO (2025)\1° SEMESTRE\Final Programacion II\Clase 3\&quot; &quot;-FUE:\valentino\facu\3° AÑO (2025)\1° SEMESTRE\Final Programacion II\Clase 3\lib\x86_64-win64\&quot; &quot;-FEE:\valentino\facu\3° AÑO (2025)\1° SEMESTRE\Final Programacion II\Clase 3\&quot; &quot;-oE:\valentino\facu\3° AÑO (2025)\1° SEMESTRE\Final Programacion II\Clase 3\act5.exe&quot; act5.lpr"/>
+</CONFIG>

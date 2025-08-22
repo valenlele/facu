@@ -1,0 +1,40 @@
+Trabajo Promocion Assembler:
+
+LENGUAJE ASSEMBLER: SU HISTORIA, FUNCIONAMIENTO Y POR QUE ES IMPORTANTE
+
+https://en.wikipedia.org/wiki/Assembly_language#
+https://es.wikipedia.org/wiki/Lenguaje_ensamblador#Caracter%C3%ADsticas
+https://medium.com/computer-programming-languages/a-bit-about-assembly-language-e94fdf3bdb6b
+
+-Que es Assembler?
+
+-Historia de Assembler:
+  -En que contexto se desarrollo
+  -Para que se desarrollo en un principio
+
+-Para que se usaba:
+  -Ejemplos de programas, aplicaciones, juegos
+  -https://www.quora.com/What-are-some-examples-of-programs-written-in-pure-assembly-language
+
+-Diferencias principales entre Assembler y lenguajes modernos:
+  -Ejemplos directos de instrucciones en Assembler vs otro idioma
+
+-Como funciona:
+  -Seccion "computadora" de https://vonsim.github.io/es/computer/cpu.html
+
+-Para que se usa actualmente:
+  -https://www.reddit.com/r/learnprogramming/comments/tedbs2/how_is_assembly_used_today/
+  -https://www.quora.com/What-are-some-examples-of-real-world-use-for-assembly-language
+
+-Por que es importante aprender Assembler:
+  -https://quantumzeitgeist.com/what-happened-to-assembly-language-do-we-need-it-anymore/
+
+-https://www.quora.com/Why-were-old-games-programmed-in-assembly-when-higher-level-languages-existed
+
+https://www.techopedia.com/why-is-learning-assembly-language-still-important/7/32268
+https://www.investopedia.com/terms/a/assembly-language.asp
+
+-Ampliar introducción
+-Ampliar conclusion
+-Revisar redacción
+-Revisar repetición de conceptos / integrar

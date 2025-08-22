@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="numerosycaracteresej1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="6"/>
+        <CursorPos X="10" Y="22"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="29" Column="36" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="15" Column="28" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="19" Column="24" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="15" Column="18" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="21" Column="19" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="18" Column="10" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="9" Column="15" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="14" Column="49" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="16" Column="56" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="22" Column="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="9" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="12" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="19" Column="12" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="4" Column="9" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="13" Column="31" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="18" Column="111" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="4" Column="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="17" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="14" Column="15" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="13" Column="57" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="14" Column="16" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="13" Column="58" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="15" Column="14" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="16" Column="9" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="21" Column="11" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="16" Column="14" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin9.lpr"/>
+        <Caret Line="6" Column="24"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

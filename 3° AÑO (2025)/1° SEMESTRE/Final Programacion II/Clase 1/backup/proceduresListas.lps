@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="proceduresListas.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="77"/>
+        <CursorPos X="5" Y="100"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\f6079c11-5962-453a-93f5-6ca0c5621bd0_x (2).zip.bd0\x.pas"/>
+        <UnitName Value="X"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="80" Y="8"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\c9b80449-1699-49b1-8a67-9c105b49ee16_x (2).zip.e16\x.pas"/>
+        <UnitName Value="X"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="8"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="proceduresListas.lpr"/>
+        <Caret Line="16" Column="13" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="proceduresListas.lpr"/>
+        <Caret Line="29" Column="27" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="proceduresListas.lpr"/>
+        <Caret Line="30" Column="3" TopLine="18"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

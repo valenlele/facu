@@ -1,0 +1,9 @@
+11)
+
+a) Ambos programas realizan una multlipicacion entre num1 y num2.
+
+b) El resultado se guarda en DX
+
+c) El primer programa realiza la tarea mas rapido ya que no depende de llamar a una subrutina. El tiempo de ejecucion depende del valor almacenado en CL (NUM2)
+
+d) y e) La llamada de SUB1 desvia el flujo del programa a la subrutina SUB1 y luego se regresa al punto donde fue llamada. Al ejecutarse CALL SUB1, se guarda la direccion de memoria a la que tiene que volver el programa cuando termine de ejecutarse la subrutina. Primero, se hace un PUSH en la pila (Stack, lugar de la memoria para alojar info. de manera temporal), guardandose asi la direccion de memoria que le sigue al CALL, y el SP (Stack Pointer) que apuntaba inicialmente al tope de la pila, se decrementa dos unidades. Finalmente, al hacer RET se hace un POP de la pila, aumentando el SP en dos unidades y devolviendo asi la direccion de memoria que la pila tenia almacenada al IP (instruction pointer).

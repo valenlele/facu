@@ -1,0 +1,35 @@
+9)
+
+ORG 1000H
+  X DW 3
+  ARREGLO DW ?
+
+ORG 2000H
+  MOV AX, X
+  MOV BX, OFFSET ARREGLO ;OFFSET pasa la direccion de memoria donde esta almacenado arreglo
+  
+  PROCESAR:
+    MOV CX, AX
+    AND CX, 1 ; para saber si un nuemero es par o impar, solo importa el bit menos significativo
+    JZ ES_PAR
+
+  ES_IMPAR:
+    ADD AX, 5
+    JMP GUARDAR
+    
+  ES_PAR:
+    SUB AX, 7
+    JMP GUARDAR
+    
+  GUARDAR:
+    MOV [BX], AX; guardo en el arreglo
+    ADD BX, 2
+    
+    CMP AX, 0
+    JZ FIN
+    JMP PROCESAR
+    
+  FIN:
+    
+  HLT
+  END

@@ -1,0 +1,105 @@
+programa ej5Repaso
+
+areas
+  papelero: AreaP (100,1,100,1)
+  iCliente1: AreaP (10,1,10,1)
+  iCliente2: AreaP (11,1,11,1)
+  iCliente3: AreaP (12,1,12,1)
+  iServidor: AreaP (13,1,13,1)
+  
+robots
+
+  robot tipoCliente
+  variables
+    id:numero
+    cantP:numero
+    avAct,caAct:numero
+  comenzar
+    RecibirMensaje(id,rServidor)
+    repetir 4
+      EnviarMensaje(id,rServidor)
+      EnviarMensaje(0,rServidor)      {enviar servidor que no termine}    
+      RecibirMensaje(cantP,rServidor)
+      avAct:=PosAv
+      caAct:=PosCa
+      Pos(100,1)
+      repetir cantP
+        tomarPapel
+      Pos(avAct,caAct)
+      repetir cantP
+        depositarPapel
+      EnviarMensaje(1,rServidor)
+    EnviarMensaje(id,rServidor) 
+    EnviarMensaje(1,rServidor)
+  fin
+  
+  robot tipoServidor
+  variables
+    termine1,termine2,termine3:numero
+    id:numero
+    cantP:numero
+    solicitar:numero
+    seguir:numero
+  comenzar
+    termine1:=0
+    termine2:=0
+    termine3:=0
+    EnviarMensaje(1,rCliente1)
+    EnviarMensaje(2,rCliente2)
+    EnviarMensaje(3,rCliente3) 
+    mientras (termine1<>1) & (termine2<>1) & (termine3<>1)
+      RecibirMensaje(id,*)
+      si id=1
+        RecibirMensaje(termine1,rCliente1)
+        si termine1<>1
+          Random(cantP,1,5)
+          Pos(100,1)
+          repetir cantP
+            depositarPapel
+          Pos(13,1)
+          EnviarMensaje(cantP,rCliente1)
+          RecibirMensaje(seguir,rCliente1)
+      sino
+        si id=2
+          RecibirMensaje(termine2,rCliente2)
+          si termine2<>1
+            Random(cantP,1,5)
+            Pos(100,1)
+            repetir cantP
+              depositarPapel
+            Pos(13,1)
+            EnviarMensaje(cantP,rCliente2)
+            RecibirMensaje(seguir,rCliente2)
+        sino
+          si id=3
+            RecibirMensaje(termine3,rCliente3)
+            si termine3<>1
+              Random(cantP,1,5)
+              Pos(100,1)
+              repetir cantP
+                depositarPapel
+              Pos(13,1)
+              EnviarMensaje(cantP,rCliente3)  
+              RecibirMensaje(seguir,rCliente3)
+  fin
+  
+variables
+  rCliente1: tipoCliente
+  rCliente2: tipoCliente
+  rCliente3: tipoCliente
+  rServidor: tipoServidor
+  
+comenzar
+  AsignarArea(rCliente1, papelero)
+  AsignarArea(rCliente1, iCliente1)
+  AsignarArea(rCliente2, papelero)
+  AsignarArea(rCliente2, iCliente2)
+  AsignarArea(rCliente3, papelero)
+  AsignarArea(rCliente3, iCliente3)
+  AsignarArea(rServidor, papelero)
+  AsignarArea(rServidor, iServidor)
+  Iniciar(rCliente1, 10,1)
+  Iniciar(rCliente2, 11,1)
+  Iniciar(rCliente3, 12,1)
+  Iniciar(rServidor, 13,1)
+fin

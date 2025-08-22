@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="busquedaDicotomica.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="15"/>
+        <CursorPos X="95" Y="62"/>
+        <FoldState Value=" T3F0F1 PIK0Y"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\Rar$DIa1436.21454\ProgramaVectorOrdenado.pas"/>
+        <UnitName Value="VectorOrdenado"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="5" Y="69"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\Rar$DIa23620.17645\ProgramaVectores.pas"/>
+        <UnitName Value="Arreglos"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="68" Y="52"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory>
+      <Position>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\Rar$DIa23620.17645\ProgramaVectores.pas"/>
+        <Caret Line="5" Column="21"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

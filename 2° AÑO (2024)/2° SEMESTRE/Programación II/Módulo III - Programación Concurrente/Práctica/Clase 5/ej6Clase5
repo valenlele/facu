@@ -1,0 +1,119 @@
+programa ej6Clase5
+
+procesos
+  
+  proceso enviarMensajes(E robTrab1:numero ; E robTrab2:numero ; E tarea1:numero ; E tarea2:numero ; E av1:numero ; E av2:numero ; E ca1:numero ; E ca2:numero)
+  comenzar
+    si (robTrab1=1)
+      EnviarMensaje(tarea1,robTrab1)
+      EnviarMensaje(av1,robTrab1)
+      EnviarMensaje(ca1,robTrab1)
+      EnviarMensaje(tarea2,robTrab2)
+      EnviarMensaje(av2,robTrab2)
+      EnviarMensaje(ca2,robTrab2)  
+    sino
+      EnviarMensaje(tarea1,robTrab2)
+      EnviarMensaje(av1,robTrab2)
+      EnviarMensaje(ca1,robTrab2)
+      EnviarMensaje(tarea2,robTrab1)
+      EnviarMensaje(av2,robTrab1)
+      EnviarMensaje(ca2,robTrab1)    
+  fin
+  
+  proceso recogerFlores
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+  fin
+  
+  proceso recogerPapeles
+  comenzar
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+  fin
+  
+  proceso vaciarBolsa
+  comenzar
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+  fin
+
+areas
+  cuadrante: AreaPC (2,2,100,100)
+  iJefe: AreaP (1,1,1,1)
+  iTrab1: AreaP (2,1,2,1)
+  iTrab2: AreaP (3,1,3,1)
+  
+robots
+
+  robot tipoJefe
+  variables
+    tarea1,tarea2:numero
+    av1,av2,ca1,ca2:numero
+    trab1,trab2:numero
+    termine:numero
+  comenzar
+    repetir 10
+      Random(tarea1,1,3)
+      Random(av1,2,100)
+      Random(ca1,2,100)
+      Random(tarea2,1,3)
+      Random(av2,2,100)
+      Random(ca2,2,100)
+      Random(trab1,1,2)
+      Random(trab2,1,2)
+      mientras (trab1=trab2)
+        Random(trab1,1,2)
+        Random(trab2,1,2) 
+      enviarMensajes(trab1,trab2,tarea1,tarea2,av1,av2,ca1,ca2) 
+      repetir 2
+        RecibirMensaje(termine,*)
+    EnviarMensaje(4,robTrab1)
+    EnviarMensaje(4,robTrab2)
+  fin
+  
+  robot tipoTrabajador
+  variables
+    tarea:numero
+    av,ca:numero
+    avI,caI:numero
+  comenzar
+    RecibirMensaje(tarea,robJefe)
+    mientras (tarea<>4)
+      RecibirMensaje(av,robJefe)
+      RecibirMensaje(ca,robJefe)
+      avI:=PosAv
+      caI:=PosCa
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      si (tarea=1)
+        recogerFlores
+      sino
+        si (tarea=2)
+          recogerPapeles
+        sino
+          si (tarea=3)
+            vaciarBolsa
+      Pos(avI,caI)
+      LiberarEsquina(av,ca)
+      EnviarMensaje(0,robJefe)
+      RecibirMensaje(tarea,robJefe)
+  fin
+  
+variables
+  robJefe:tipoJefe
+  robTrab1:tipoTrabajador
+  robTrab2:tipoTrabajador
+  
+comenzar
+  AsignarArea(robJefe, iJefe)
+  AsignarArea(robTrab1, iTrab1)
+  AsignarArea(robTrab1, cuadrante)
+  AsignarArea(robTrab2, iTrab2)
+  AsignarArea(robTrab2, cuadrante)
+  Iniciar(robJefe, 1,1)
+  Iniciar(robTrab1, 2,1) 
+  Iniciar(robTrab2, 3,1)
+fin

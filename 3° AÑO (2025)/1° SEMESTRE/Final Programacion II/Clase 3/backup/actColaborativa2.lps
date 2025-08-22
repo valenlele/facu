@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="actColaborativa2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="153"/>
+        <CursorPos X="42" Y="161"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="164" Column="31" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="93" Column="195" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="100" Column="180" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="133" Column="41" TopLine="103"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="129" Column="49" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="150" Column="48" TopLine="142"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="72" Column="14" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="85" Column="14" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="actColaborativa2.lpr"/>
+        <Caret Line="14" Column="67"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

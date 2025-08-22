@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Clasificado
+comment1.params=nom\ ap\ rank\ horas\ mins
+comment1.target=Clasificado(java.lang.String,\ java.lang.String,\ int,\ int,\ int)
+comment2.params=
+comment2.target=Clasificado()
+comment3.params=
+comment3.target=int\ getHoras()
+comment4.params=
+comment4.target=int\ getMins()
+comment5.params=horas
+comment5.target=void\ setHoras(int)
+comment6.params=mins
+comment6.target=void\ setMins(int)
+comment7.params=pos
+comment7.target=double\ sumarPuntos(int)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

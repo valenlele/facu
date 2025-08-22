@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1751290672 source:d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ej11p6\istack.c
+	<stdio.h>
+	<limits.h>
+	"istack.h"
+
+1751290722 d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ej11p6\istack.h
+
+1751290584 source:d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ej11p6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"istack.h"
+

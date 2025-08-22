@@ -1,0 +1,54 @@
+programa ej1Clase2
+
+procesos
+  proceso recorrerYtomar(E numAv: numero; ES totFlores:numero; ES esqSinFlores:numero)
+  variables
+    floresEsq:numero
+  comenzar
+    Pos(numAv, 1)
+    repetir 99
+      floresEsq:=0
+      mientras HayFlorEnLaEsquina
+        floresEsq:=floresEsq+1
+        tomarFlor
+      mover
+      si floresEsq=0
+        esqSinFlores:=esqSinFlores+1
+      totFlores:=totFlores+floresEsq
+    mientras HayFlorEnLaEsquina
+      floresEsq:=floresEsq+1
+      tomarFlor
+    si floresEsq=0
+      esqSinFlores:=esqSinFlores+1
+    totFlores:=totFlores+floresEsq
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+  fin
+  
+areas
+  ciudad: AreaC (1,1,100,100)
+  
+robots
+  robot tipo1
+  variables
+    totFlores:numero
+    esqSinFlores:numero
+    av:numero
+  comenzar
+    av:=1
+    repetir 3
+      totFlores:=0
+      esqSinFlores:=0
+      recorrerYtomar(av,totFlores,esqSinFlores)
+      Informar(totFlores)
+      Informar(esqSinFlores)
+      av:=av+2
+  fin
+  
+variables
+  robot1:tipo1
+  
+comenzar
+  AsignarArea(robot1, ciudad)
+  Iniciar(robot1, 1,1)
+fin

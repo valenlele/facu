@@ -1,0 +1,183 @@
+programa ej2Clase5
+
+procesos
+  
+  proceso enviarIdentificaciones
+  comenzar
+    EnviarMensaje(1,rEj1)
+    EnviarMensaje(2,rEj2)    
+    EnviarMensaje(3,rEj3)
+  fin
+
+  proceso enviarCallesRandom
+  variables
+    ca1,ca2,ca3:numero
+  comenzar
+    Random(ca1,60,80)
+    Random(ca2,60,80)
+    Random(ca3,60,80) 
+    mientras (ca1=ca2) | (ca1=ca3) | (ca2=ca3)
+      Random(ca1,60,80)
+      Random(ca2,60,80)
+      Random(ca3,60,80)  
+    EnviarMensaje(ca1,rEj1)
+    EnviarMensaje(ca2,rEj2)
+    EnviarMensaje(ca3,rEj3)
+  fin  
+  
+  proceso tomarFlores(ES cantF:numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantF:=cantF+1
+  fin
+  
+  proceso tomarPapeles(ES cantP:numero)
+  comenzar
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+      cantP:=cantP+1
+  fin
+  
+  proceso recorrerYTomar(ES cantF:numero ; ES cantP:numero)
+  comenzar
+    repetir 99
+      tomarFlores(cantF)
+      tomarPapeles(cantP)
+      mover
+    tomarFlores(cantF)
+    tomarPapeles(cantP)
+  fin
+  
+  proceso calcularMaximos(E cantF:numero ; E cantP:numero ; E quienSos:numero ; ES maxF:numero ; ES maxP:numero ; ES maxFRob:numero ; ES maxPRob:numero)
+  comenzar
+    si cantF>maxF
+      maxF:=cantF
+      maxFRob:=quienSos
+    si cantP>maxP
+      maxP:=cantP
+      maxPRob:=quienSos    
+  fin
+  
+  proceso depositarFlores
+  comenzar
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+  fin
+  
+  proceso depositarPapeles
+  comenzar
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+  fin
+  
+areas
+  calles: AreaPC (1,60,100,80)
+  ca50: AreaPC (1,50,100,50)
+  esq100: AreaP(100,100,100,100)
+  iRobJefe: AreaP(1,1,1,1)
+  iRobEj1: AreaP(2,2,2,2)
+  iRobEj2: AreaP(3,3,3,3)
+  iRobEj3: AreaP(4,4,4,4)
+  
+robots
+  robot tipoJefe
+  variables
+    cantF,cantP:numero
+    quienSos:numero
+    maxF,maxP,maxFRob,maxPRob:numero
+  comenzar
+    maxF:=-1
+    maxP:=-1
+    enviarIdentificaciones
+    enviarCallesRandom
+    repetir 3
+      RecibirMensaje(quienSos,*)
+      si quienSos=1
+        RecibirMensaje(cantF,rEj1)
+        RecibirMensaje(cantP,rEj1)
+      sino
+        si quienSos=2
+          RecibirMensaje(cantF,rEj2)
+          RecibirMensaje(cantP,rEj2) 
+        sino
+          si quienSos=3
+            RecibirMensaje(cantF,rEj3)
+            RecibirMensaje(cantP,rEj3)  
+      calcularMaximos(cantF,cantP,quienSos,maxF,maxP,maxFRob,maxPRob)
+    EnviarMensaje(maxFRob,rEj1)
+    EnviarMensaje(maxPRob,rEj1)
+    EnviarMensaje(maxFRob,rEj2)
+    EnviarMensaje(maxPRob,rEj2)
+    EnviarMensaje(maxFRob,rEj3)
+    EnviarMensaje(maxPRob,rEj3)
+  fin
+  
+  robot tipoEj
+  variables
+    ca:numero
+    cantF,cantP:numero
+    quienSoy:numero
+    maxFRob,maxPRob:numero
+  comenzar
+    cantF:=0
+    cantP:=0
+    RecibirMensaje(quienSoy,rJefe)
+    RecibirMensaje(ca,rJefe)
+    Pos(1,ca)
+    derecha
+    recorrerYTomar(cantF,cantP)
+    EnviarMensaje(quienSoy,rJefe)
+    EnviarMensaje(cantF,rJefe)
+    EnviarMensaje(cantP,rJefe)
+    RecibirMensaje(maxFRob,rJefe)
+    RecibirMensaje(maxPRob,rJefe)
+    si (quienSoy=maxFRob) | (quienSoy=maxPRob)
+      BloquearEsquina(1,50)
+      Pos(1,50)
+      repetir 99
+        si quienSoy=maxFRob & HayFlorEnLaBolsa
+          depositarFlor
+        sino
+          si quienSoy=maxPRob & HayPapelEnLaBolsa
+            depositarPapel
+        BloquearEsquina(PosAv+1,PosCa)
+        mover
+        LiberarEsquina(PosAv-1,PosCa)
+    sino
+      si (HayFlorEnLaBolsa) | (HayPapelEnLaBolsa)
+        Informar(quienSoy)
+        BloquearEsquina(100,100)
+        Pos(100,100)
+        depositarFlores
+        depositarPapeles        
+        Pos(1+quienSoy,1+quienSoy)
+        LiberarEsquina(100,100)
+    Pos(1+quienSoy,1+quienSoy)
+  fin
+  
+variables
+  rJefe:tipoJefe
+  rEj1:tipoEj
+  rEj2:tipoEj
+  rEj3:tipoEj
+  
+comenzar
+  AsignarArea(rJefe, iRobJefe)
+  AsignarArea(rEj1, calles)
+  AsignarArea(rEj1, ca50)
+  AsignarArea(rEj1, esq100)
+  AsignarArea(rEj1, iRobEj1)
+  AsignarArea(rEj2, calles)
+  AsignarArea(rEj2, ca50)
+  AsignarArea(rEj2, esq100)
+  AsignarArea(rEj2, iRobEj2)
+  AsignarArea(rEj3, calles)
+  AsignarArea(rEj3, ca50)
+  AsignarArea(rEj3, esq100)
+  AsignarArea(rEj3, iRobEj3)
+  Iniciar(rJefe, 1,1)
+  Iniciar(rEj1, 2,2)
+  Iniciar(rEj2, 3,3)
+  Iniciar(rEj3, 4,4)
+fin

@@ -1,0 +1,76 @@
+version_corregida3
+; Assembler para Vonsim
+; Suma de 2 vectores de 6 elementos de 32 bits cada uno
+; SIN usar SI, DI, BP
+; SOLO BX para direccionamiento indirecto
+ORG 1000H
+VECTOR1:      DW 1111H, 0000H, 2222H, 0000H, 3333H, 0000H, 4444H, 0000H, 5555H, 0000H, 6666H, 0000H
+VECTOR2:      DW 0001H, 0000H, 0002H, 0000H, 0003H, 0000H, 0004H, 0000H, 0005H, 0000H, 0006H, 0000H
+RESULTADOS:   DB ?
+
+; Subrutina SUMA32
+; Entradas:
+;  BX = dirección 1er sumando
+;  DX = dirección 2do sumando
+;  CX = dirección resultado
+; Salida: resultado queda en [CX], [CX+2]
+ORG 1500H
+SUMA32:
+   PUSH AX          ; guardar contador al inicio
+   
+   ; Leer parte baja del 1er sumando
+   MOV AX, [BX]
+   ; Leer parte baja del 2do sumando
+   PUSH BX        ; guardar BX
+   MOV BX, DX
+   ADD AX, [BX]   ; suma parte baja
+   POP BX         ; restaurar BX
+   
+   ; Guardar parte baja en resultado
+   PUSH BX        ; guardar BX
+   MOV BX, CX
+   MOV [BX], AX
+   POP BX
+   
+   ; Guardar el carry en DL antes de hacer otras operaciones
+   MOV DL, 0
+   JNC NO_CARRY
+   MOV DL, 1      ; DL=1 si hay carry
+NO_CARRY:
+   
+   ; Sumar parte alta
+   MOV AX, [BX+2]     ; parte alta de 1er sumando
+   ; Leer parte alta del 2do sumando
+   PUSH BX
+   MOV BX, DX
+   ADD AX, [BX+2]
+   POP BX
+   
+   ; Agregar carry guardado en DL
+   ADD AX, DL
+   
+   ; Guardar parte alta en resultado
+   PUSH BX
+   MOV BX, CX
+   MOV [BX+2], AX
+   POP BX
+   
+   POP AX           ; restaurar contador al final
+   RET
+
+; Programa principal
+ORG 2000H
+   MOV BX, OFFSET VECTOR1
+   MOV DX, OFFSET VECTOR2
+   MOV CX, OFFSET RESULTADOS
+   MOV AL, 6            ; contador en AL
+LOOP_ELEMENTOS:
+   CALL SUMA32
+   ; Avanzar punteros
+   ADD BX, 4            ; siguiente 32 bits en VECTOR1
+   ADD DX, 4            ; siguiente 32 bits en VECTOR2
+   ADD CX, 4            ; siguiente posición en RESULTADOS
+   DEC AL
+   JNZ LOOP_ELEMENTOS
+   HLT
+END

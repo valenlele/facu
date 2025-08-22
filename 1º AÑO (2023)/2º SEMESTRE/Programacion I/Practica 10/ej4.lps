@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej4.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="7" Y="228"/>
+        <FoldState Value=" T3d0S9 PicjQ0M"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="12">
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="69" Column="40" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="163" Column="41" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="90" Column="56" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="109" Column="53" TopLine="133"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="185" Column="36" TopLine="159"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="149" Column="28" TopLine="138"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="155" Column="39" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="163" Column="95" TopLine="148"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="199" Column="57" TopLine="195"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="160" Column="21" TopLine="142"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="200" Column="51" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="37" Column="14" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="241" Column="52" TopLine="222"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

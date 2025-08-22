@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej4.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej7a"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="8"/>
+        <CursorPos X="27" Y="23"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="9">
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="26" Column="50" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="14" Column="20" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="3" Column="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="21" Column="8" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="33" Column="70" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="11" Column="34"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="6" Column="77"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="8" Column="28"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="23" Column="65" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ej4.lpr"/>
+        <Caret Line="22" Column="78" TopLine="8"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

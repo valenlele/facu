@@ -1,0 +1,98 @@
+version_claude_2
+
+org 1000h
+; Vector A - 6 elementos de 32 bits (parte baja en posición par, parte alta en posición impar)
+vectorA dw 1234h, 0000h    ; elemento 0: 00001234h
+        dw 5678h, 0001h    ; elemento 1: 00015678h  
+        dw 9ABCh, 0002h    ; elemento 2: 00029ABCh
+        dw DEF0h, 0003h    ; elemento 3: 0003DEF0h
+        dw 1111h, 0004h    ; elemento 4: 00041111h
+        dw 2222h, 0005h    ; elemento 5: 00052222h
+
+; Vector B - 6 elementos de 32 bits
+vectorB dw 1000h, 0000h    ; elemento 0: 00001000h
+        dw 2000h, 0000h    ; elemento 1: 00002000h
+        dw 3000h, 0000h    ; elemento 2: 00003000h
+        dw 4000h, 0000h    ; elemento 3: 00004000h
+        dw 5000h, 0000h    ; elemento 4: 00005000h
+        dw 6000h, 0000h    ; elemento 5: 00006000h
+
+; Vector resultado - 6 elementos de 32 bits
+resultado dw 12 dup(0)     ; 12 palabras = 6 elementos de 32 bits
+
+org 2000h
+inicio:
+    ; Inicializar punteros
+    mov bx, offset vectorA    ; BX apunta al vector A
+    mov cx, offset vectorB    ; CX apunta al vector B
+    mov dx, offset resultado  ; DX apunta al vector resultado
+    
+    ; Contador de elementos
+    mov ax, 6                 ; 6 elementos a procesar
+    
+bucle_suma:
+    push ax                   ; Guardar contador
+    push dx                   ; Guardar puntero resultado
+    
+    ; Pasar parámetros por referencia (direcciones en registros)
+    ; BX ya tiene la dirección del elemento actual de vectorA
+    ; CX ya tiene la dirección del elemento actual de vectorB
+    call suma32bits
+    
+    ; El resultado está en AX (parte baja) y DX (parte alta)
+    pop dx                    ; Recuperar puntero resultado
+    
+    ; Almacenar resultado de 32 bits
+    mov [dx], ax              ; Parte baja
+    mov [dx+2], dx            ; Parte alta (DX contiene parte alta del resultado)
+    
+    ; Avanzar punteros (4 bytes = 2 words por elemento de 32 bits)
+    add bx, 4                 ; Siguiente elemento vectorA
+    add cx, 4                 ; Siguiente elemento vectorB
+    add dx, 4                 ; Siguiente posición resultado
+    
+    pop ax                    ; Recuperar contador
+    dec ax                    ; Decrementar contador
+    jnz bucle_suma           ; Continuar si no es cero
+    
+    ; Fin del programa
+    int 0
+
+; Subrutina: suma de números de 32 bits SIN ADC
+; Parámetros por referencia:
+;   BX = dirección del primer número de 32 bits
+;   CX = dirección del segundo número de 32 bits
+; Retorna por valor:
+;   AX = parte baja del resultado
+;   DX = parte alta del resultado
+suma32bits:
+    push bx                   ; Guardar registros
+    push cx
+    
+    ; Cargar primer número de 32 bits
+    mov ax, [bx]             ; Parte baja del primer número
+    mov dx, [bx+2]           ; Parte alta del primer número
+    
+    ; Sumar partes bajas
+    add ax, [cx]             ; Sumar partes bajas
+    
+    ; Manejar carry manualmente para parte alta
+    jnc sin_carry            ; Si no hay carry, saltar
+    
+    ; Hay carry, incrementar parte alta
+    add dx, [cx+2]           ; Sumar partes altas
+    inc dx                   ; Sumar el carry (incrementar en 1)
+    jmp fin_suma
+    
+sin_carry:
+    ; No hay carry, solo sumar partes altas
+    add dx, [cx+2]           ; Sumar partes altas
+    
+fin_suma:
+    ; El resultado ya está en AX (baja) y DX (alta)
+    
+    pop cx                   ; Restaurar registros
+    pop bx
+    ret
+
+end inicio

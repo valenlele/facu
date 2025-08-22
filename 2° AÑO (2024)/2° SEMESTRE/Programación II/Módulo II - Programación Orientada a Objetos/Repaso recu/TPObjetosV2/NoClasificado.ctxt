@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=NoClasificado
+comment1.params=nom\ ap\ rank\ bestPuesto
+comment1.target=NoClasificado(java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.params=
+comment2.target=NoClasificado()
+comment3.params=
+comment3.target=int\ getBestPuesto()
+comment4.params=bestPuesto
+comment4.target=void\ setBestPuesto(int)
+comment5.params=pos
+comment5.target=double\ sumarPuntos(int)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

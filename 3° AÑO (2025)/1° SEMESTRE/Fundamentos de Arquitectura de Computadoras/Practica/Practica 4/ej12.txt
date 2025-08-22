@@ -1,0 +1,31 @@
+12)
+
+ORG 1000H 
+NUM1 DB 5H 
+NUM2 DB 3H 
+
+ORG 3000H 
+SUB2: MOV DX, 0 
+LAZO: MOV BX, AX 
+ADD DH, [BX] 
+PUSH DX
+MOV BX, CX 
+MOV DL, [BX] 
+DEC DL 
+MOV [BX], DL 
+POP DX 
+JNZ LAZO ;POP no afecta a los flags, en este caso es DL
+MOV BX, AX 
+MOV [BX], DH 
+RET 
+
+ORG 2000H 
+MOV AX, OFFSET NUM1 ;se guarda la direccion de memoria del primer operando (5)
+MOV CX, OFFSET NUM2 ;se guarda la direccion de memoria del segundo operando (3)
+CALL SUB2 ;se llama a la subrutina SUB2 (se guarda en la pila la direccion de memoria a la que se debe retornar cuando termine)
+HLT 
+END 
+
+a) Al ejecutarse PUSH DX, el SP (que estaba apuntando a la celda 8000H), se decrementa en dos unidades y se copia el dato de DX al tope de la pila (la dirección donde ahora apunta SP). Cuando se hace POP DX, se copia la informacion almacenada en la direccion almacenada por SP y se vuelca en DX, y el SP incrementa en dos unidades.
+
+b) DX guarda el resultado en la parte alta y la cantidad de iteraciones restantes en la parte baja.

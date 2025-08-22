@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Auto
+comment1.params=nomDue\u00F1o\ patente
+comment1.target=Auto(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=Auto()
+comment3.params=
+comment3.target=java.lang.String\ getNomDue\u00F1o()
+comment4.params=
+comment4.target=java.lang.String\ getPatente()
+comment5.params=nomDue\u00F1o
+comment5.target=void\ setNomDue\u00F1o(java.lang.String)
+comment6.params=patente
+comment6.target=void\ setPatente(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

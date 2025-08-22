@@ -1,0 +1,50 @@
+programa ej2-2aPower
+  
+procesos
+  proceso  contarFlores(ES totFlores:numero)
+  variables
+    floresEsq:numero
+  comenzar
+    floresEsq:=0
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      floresEsq:=floresEsq+1
+    totFlores:=totFlores+floresEsq
+    repetir floresEsq
+      mientras HayFlorEnLaBolsa
+        depositarFlor    
+  fin
+  
+  proceso recorrerYcontar(E base:numero ; E altura:numero ; ES totFlores:numero)
+  comenzar 
+    repetir 2 
+      repetir altura
+        contarFlores(totFlores)
+        mover
+      derecha
+      repetir base
+        contarFlores(totFlores)
+        mover
+      derecha    
+  fin
+  
+areas
+  rectangulo: AreaP (2,2,5,7)
+  
+robots
+  robot tipo1
+  variables
+    totFlores:numero
+  comenzar 
+    totFlores:=0 
+    recorrerYcontar(3,5,totFlores)   
+    Informar(totFlores)  
+  fin
+  
+variables
+  robot1:tipo1
+  
+comenzar
+  AsignarArea(robot1,rectangulo)
+  Iniciar(robot1, 2,2)
+fin

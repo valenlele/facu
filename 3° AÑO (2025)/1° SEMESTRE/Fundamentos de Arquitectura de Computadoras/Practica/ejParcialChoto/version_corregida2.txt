@@ -1,0 +1,56 @@
+version_corregida2
+ORG 1000H
+  VECTOR1 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  VECTOR2 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+  RESULTADOS DB ?
+
+ORG 1500H
+  SUMA:
+    MOV DH, 2
+    LOOP_SUMA:
+      PUSH AX ;guardo la direccion de memoria actual de vec1 en la cola para no perderla
+      PUSH BX ;guardo la direccion de memoria actual de vec3 en la cola para no perderla
+      
+      MOV BX, OFFSET VECTOR1 ;guardo la direccion de memoria de vec1 en bx para hacer el direccionamiento indirecto
+      MOV AX, [BX] ;guardo el contenido de la direccion de vec1 en ax
+
+      MOV BX, OFFSET VECTOR2
+      MOV BX, [BX] 
+      
+      ADD BX, AX
+      JC CARRY
+      VOLVER:
+        MOV BX, OFFSET RESULTADOS
+        MOV [BX], BL
+        MOV [BX+1], BH
+        
+        POP BX
+        POP AX
+        ADD AX, 2
+        ADD BX, 2
+        ADD CX, 2
+        DEC DH
+        JNZ LOOP_SUMA
+      RET
+    CARRY:
+      MOV BX, OFFSET RESULTADOS
+      ADD [BX+2], 1B
+      JMP VOLVER
+  RET
+      
+ORG 2000H
+  MOV AX, OFFSET VECTOR1
+  MOV BX, OFFSET VECTOR2
+  MOV CX, OFFSET RESULTADOS
+  MOV DL, 6
+  LOOP:
+    CALL SUMA
+    ADD AX, 4
+    ADD BX, 4
+    ADD CX, 4
+    DEC DL
+    JNZ LOOP
+  HLT
+  END
+    
+

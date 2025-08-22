@@ -1,0 +1,103 @@
+programa ej3Clase3
+
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  
+  proceso tomarFloresYPapeles(ES cantFlores:numero ; ES cantPapeles:numero)
+  comenzar
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+      cantPapeles:=cantPapeles+1
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantFlores:=cantFlores+1
+  fin
+  
+  proceso verifEscalones(E cantFlores:numero ; E cantPapeles:numero ; ES cantEsc:numero)
+  comenzar
+    si cantFlores>cantPapeles
+      cantEsc:=cantEsc+1  
+  fin
+  
+  proceso hacerEscalera(ES cantEsc:numero)
+  variables
+    alto:numero
+    cantFlores:numero
+    cantPapeles:numero
+  comenzar
+    repetir 4
+      cantFlores:=0
+      cantPapeles:=0
+      Random(alto,1,5)
+      repetir alto
+        tomarFloresYPapeles(cantFlores,cantPapeles)
+        mover
+      derecha
+      mover
+      izquierda
+      verifEscalones(cantFlores,cantPapeles,cantEsc)
+  fin
+ 
+areas
+  ciudad: AreaC(1,1,16,21)
+  
+robots
+  robot tipo1
+  variables
+    cantEsc:numero
+  comenzar
+    cantEsc:=0
+    hacerEscalera(cantEsc)
+    EnviarMensaje(cantEsc,robotJ)
+  fin
+  
+  robot tipo2
+  variables
+    cantEsc:numero
+  comenzar
+    cantEsc:=0
+    hacerEscalera(cantEsc)
+    EnviarMensaje(cantEsc,robotJ)
+  fin
+  
+  robot tipo3
+  variables
+    cantEsc:numero
+  comenzar
+    cantEsc:=0
+    hacerEscalera(cantEsc)
+    EnviarMensaje(cantEsc,robotJ)
+  fin
+  
+  robot tipoJ
+  variables
+    totCantEsc:numero
+    cantEsc:numero
+  comenzar
+    totCantEsc:=0
+    repetir 3
+      RecibirMensaje(cantEsc,*)
+      totCantEsc:=totCantEsc+cantEsc
+    Informar(totCantEsc)
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robotJ:tipoJ
+  
+comenzar
+  AsignarArea(robot1, ciudad)
+  AsignarArea(robot2, ciudad)
+  AsignarArea(robot3, ciudad)
+  AsignarArea(robotJ, ciudad)
+  Iniciar(robot1, 2,1)
+  Iniciar(robot2, 7,1)
+  Iniciar(robot3, 12,1)
+  Iniciar(robotJ, 1,1)
+fin

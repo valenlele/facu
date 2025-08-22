@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="161"/>
+        <CursorPos X="21" Y="170"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="12">
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="76" Column="26" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="88" Column="100" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="77" Column="18" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="68" Column="16" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="28" Column="5" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="147" Column="26" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="65" Column="6" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="59" Column="30" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="172" Column="71" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="137" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="96" Column="64" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="169" Column="88" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5sinterminar.lpr"/>
+        <Caret Line="85" Column="55" TopLine="80"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

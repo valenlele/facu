@@ -1,0 +1,79 @@
+EJERCICIO PARCIAL CORREGIDISIMO Y FUNCIONAL lta lta
+
+ORG 1000H
+VECTOR1 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+VECTOR2 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+RESULTADOS DB ?
+
+ORG 2000H
+  MOV AX, OFFSET VECTOR1 ;AX = direccion vector1
+  MOV BX, OFFSET VECTOR2 ;BX = direccion vector2
+  MOV CX, OFFSET RESULTADOS ;CX = direcccion vector resultados
+  MOV DX, 6 ;DX = contador de elementos
+
+  LOOP:
+    PUSH AX ;guardo direccion de vector1 ya que AX lo voy a usar para devolver la parte baja del resultado
+    PUSH BX ;guardo direccion de vector2 ya que BX lo voy a usar para hacer direccionamiento indirecto
+    PUSH CX ;guardo direccion de vector resultado ya que CX lo voy a usar para almacenar temporalmente la parta alta del resultado
+    PUSH DX ;guardo direccion del contador ya que DX lo voy a usar para devolver la parte alta del resultado
+    
+    CALL SUMA_32
+
+    POP BX ;guardo el contador de elementos en BX temporalmente
+    POP CX ;guardo la direccion de resultados
+
+    PUSH BX ;guardo el contador
+    MOV BX, CX ;guardo la direccion de resultados
+    MOV [BX], AX ;guardo parte baja
+    MOV [BX+2], DX ;guardo parte alta
+
+    ADD CX, 4 ;avanzo en el vector de resultados
+    POP DX ;recupero contador
+    POP BX ;recupero direccion vector 2
+    POP AX ;recupero direccion vector 1
+
+    ADD AX, 4 ;avanzo al siguiente elemento del vector 1
+    ADD BX, 4 ;avanzo al siguiente elemento del vector 2
+
+    DEC DX ;decremento contador
+    JNZ LOOP
+
+    JMP FIN
+
+ORG 3000H
+  ;retorna por valor por registro:
+  ;AX = parte baja del resultado
+  ;DX = parte alta del resultado
+  SUMA_32:
+    PUSH CX ;guardo el valor de CX para usar este temporalmente como almacen de la direccion del segundo numero
+
+    MOV CX, BX ;guardo temporalmente la direccion del segundo numero
+
+    ;cargar primer numero
+    MOV BX, AX ;guardo direccion del primer numero en BX para hacer el direccionamineto indirecto
+    MOV AX, [BX] ;AX = parte baja primer numero
+    MOV DX, [BX+2] ;parte alta primer numero
+
+    MOV BX, CX ;recupero la direccion del segundo numero
+
+    ADD AX, [BX] ;sumo partes bajas
+
+    JNC SIN_CARRY
+
+    ;hay carry
+    ADD DX, [BX+2]
+    INC DX
+    JMP FIN_SUMA
+
+  SIN_CARRY:
+    ADD DX, [BX+2] ;sumo partes altas sin tener en cuenta el carry
+
+  FIN_SUMA:
+    POP CX ;recupero CX
+    
+  RET
+
+  FIN:
+
+HLT
+END

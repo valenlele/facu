@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=EventoOcasional
+comment1.params=nomBanda\ cantTemas\ motivo\ nomContratante\ diaEvento
+comment1.target=EventoOcasional(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment10.params=
+comment10.target=double\ calcularCosto()
+comment2.params=
+comment2.target=EventoOcasional()
+comment3.params=
+comment3.target=java.lang.String\ getMotivo()
+comment4.params=
+comment4.target=java.lang.String\ getNomContratante()
+comment5.params=
+comment5.target=java.lang.String\ getdiaEvento()
+comment6.params=motivo
+comment6.target=void\ setMotivo(java.lang.String)
+comment7.params=nomContratante
+comment7.target=void\ setNomContratante(java.lang.String)
+comment8.params=diaEvento
+comment8.target=void\ setDiaEvento(java.lang.String)
+comment9.params=
+comment9.target=java.lang.String\ actuar()
+numComments=11

@@ -1,0 +1,76 @@
+6)
+
+*00011101 + 00011011:
+
+ORG 1000H 
+ OP1 DB 00011101B
+ OP2 DB 00011011B
+ 
+ORG 2000H 
+ MOV AH, OP1
+ MOV AL, OP2
+ ADD AH, AL
+  
+HLT 
+END 
+
+Flags: C=0, Z=0, N=0, V=0
+
+Independientemente de la interpretacion el resultado es correcto
+
+
+*01110000 + 11110001:
+
+ORG 1000H 
+ OP1 DB 01110000B
+ OP2 DB 11110001B
+ 
+ORG 2000H 
+ MOV AH, OP1
+ MOV AL, OP2
+ ADD AH, AL
+  
+HLT 
+END 
+
+Flags: C=1, Z=0, N=0, V=0
+
+El resultado no es valido para la interpretacion sin signo
+
+
+*10011101 + 01110010:
+
+ORG 1000H 
+ OP1 DB 10011101B
+ OP2 DB 01110010B
+ 
+ORG 2000H 
+ MOV AH, OP1
+ MOV AL, OP2
+ ADD AH, AL
+  
+HLT 
+END 
+
+Flags: C=1, Z=0, N=0, V=0
+
+El resultado no es valido para la interpretacion sin signo
+
+
+*00011101 - 00011011:
+
+ORG 1000H 
+ OP1 DB 00011101B
+ OP2 DB 00011011B
+ 
+ORG 2000H 
+ MOV AH, OP1
+ MOV AL, OP2
+ SUB AH, AL
+  
+HLT 
+END 
+
+Flags: C=0, Z=0, N=0, V=0
+
+El resultado es valido para ambas interpretaciones

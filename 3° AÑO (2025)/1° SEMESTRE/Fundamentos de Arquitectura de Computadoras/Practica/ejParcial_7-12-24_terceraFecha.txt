@@ -1,0 +1,92 @@
+ORG 1000h
+  NUM1 DW 123Ah ; parte baja de NUM1
+       DW 456Bh ; parte alta de NUM1
+  NUM2 DW 789Ch ; parte baja de NUM2
+       DW 4444h ; parte alta de NUM2
+  RESULTADO DW ?
+
+ORG 2000H
+  ;verifico que sean numeros positivos
+  MOV AX, NUM1+2
+  AND AX, 8000H
+  JNZ NO_VALIDO
+  MOV AX, NUM2+2
+  AND AX, 8000H
+  JNZ NO_VALIDO
+
+  ;verifico que los exponentes sean 0
+  MOV CX, NUM1+2
+  CALL extraer_exponente
+  CMP DH, 0
+  JNZ NO_VALIDO
+  MOV CX, NUM2+2
+  CALL extraer_exponente
+  CMP DH, 0
+  JNZ NO_VALIDO
+
+  ;verifico que la mantisa sea distinta de 0
+  MOV CX, OFFSET NUM1
+  CALL validar_mantisa
+  CMP AL, 1
+  JNZ NO_VALIDO
+  MOV CX, OFFSET NUM2
+  CALL validar_mantisa
+  CMP AL, 1
+  JNZ NO_VALIDO
+
+  MOV CX, OFFSET NUM1
+  MOV DX, OFFSET NUM2
+  CALL sumar_mantisas
+  MOV RESULTADO, CX
+  MOV RESULTADO+2, AX
+
+  JMP FIN
+      
+  NO_VALIDO:
+    MOV RESULTADO, 0ABCH
+    MOV RESULTADO+2, 7F80H
+
+  FIN:
+    HLT
+
+ORG 3000H
+  extraer_exponente: 
+    MOV BX, CX
+    MOV DX, [BX]
+    AND DX, 7F80H
+    ADD DX, DX
+  RET
+
+ORG 3100H
+  validar_mantisa: 
+    MOV BX, CX
+    MOV AL, 1
+    MOV DX, [BX]
+    ADD BX, 2
+    MOV CX, [BX]
+    AND CX, 7FFFh
+    ADD CX, DX
+    JNZ fin_validar_mantisa
+    MOV AL, 0
+    fin_validar_mantisa: RET
+
+ORG 3200H
+  sumar_mantisas:
+    MOV BX, CX
+    ADD BX, 2
+    MOV AX, [BX] ;AX = parte alta num1
+
+    MOV BX, DX
+    ADD BX, 2
+    ADD AX, [BX] ;AX = suma parte alta num1 y num2
+
+    MOV BX, CX
+    MOV CX, [BX] ;CX = parte baja num1
+
+    MOV BX, DX
+    ADD CX, [BX] ;CX = suma parte baja num1 y num2
+
+    ADC AX, 0 ;suma el acarreo de la suma de la parte baja en AX (la parte alta)
+    
+
+END

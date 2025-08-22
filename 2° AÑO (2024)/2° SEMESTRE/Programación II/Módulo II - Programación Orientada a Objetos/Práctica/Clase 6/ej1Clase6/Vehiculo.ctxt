@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Vehiculo
+comment1.params=a\u00F1o\ imp\ p
+comment1.target=Vehiculo(int,\ double,\ Propietario)
+comment2.params=
+comment2.target=Vehiculo()
+comment3.params=
+comment3.target=int\ getA\u00F1o()
+comment4.params=
+comment4.target=double\ getImp()
+comment5.params=
+comment5.target=Propietario\ getPropietario()
+comment6.params=a\u00F1o
+comment6.target=void\ setA\u00F1o(int)
+comment7.params=imp
+comment7.target=void\ setImp(double)
+comment8.params=p
+comment8.target=void\ setPropietario(Propietario)
+comment9.params=
+comment9.target=double\ calcularCostosImpuestos()
+numComments=10

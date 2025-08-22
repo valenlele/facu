@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ejemploterrenos5"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="12" Y="13"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="5">
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="16" Column="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="15" Column="5" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="17" Column="5" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="18" Column="7" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="17" Column="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ejemploimpuestos.lpr"/>
+        <Caret Line="13" Column="23" TopLine="4"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

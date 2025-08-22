@@ -1,0 +1,71 @@
+programa ej1Clase3
+
+procesos
+  proceso recorrerAvenida(ES cantFlores:numero)
+  comenzar
+    repetir 9
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+        cantFlores:=cantFlores+1
+      mover
+    mientras HayFlorEnLaEsquina
+      tomarFlor 
+      cantFlores:=cantFlores+1  
+  fin
+  
+  proceso verifDiferencia (E misFlores:numero ; E susFlores:numero; ES verif:boolean)
+  comenzar
+    verif:=misFlores>susFlores
+  fin
+  
+areas
+  av1: AreaP (1,1,1,10)
+  av2: AreaP (2,11,2,20)
+  
+robots
+  robot tipo1
+  variables
+    cantFlores:numero
+    cantFlores2:numero
+    verif:boolean
+    dif:numero
+  comenzar
+    cantFlores:=0
+    dif:=0
+    recorrerAvenida(cantFlores)
+    EnviarMensaje(cantFlores,robot2) 
+    RecibirMensaje(cantFlores2,robot2)
+    verifDiferencia (cantFlores,cantFlores2,verif)
+    si verif
+      dif:=cantFlores-cantFlores2
+      Informar(dif)
+  fin
+  
+  robot tipo2
+  variables
+    cantFlores:numero
+    cantFlores1:numero
+    verif:boolean
+    dif:numero
+  comenzar
+    cantFlores:=0
+    dif:=0
+    recorrerAvenida(cantFlores)
+    EnviarMensaje(cantFlores,robot1)
+    RecibirMensaje(cantFlores1,robot1)
+    verifDiferencia(cantFlores,cantFlores1,verif)
+    si verif
+      dif:=cantFlores-cantFlores1
+      Informar(dif)
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  
+comenzar
+  AsignarArea(robot1, av1)
+  AsignarArea(robot2, av2)
+  Iniciar(robot1, 1,1)
+  Iniciar(robot2, 2,11)
+fin

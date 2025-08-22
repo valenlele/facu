@@ -1,0 +1,31 @@
+ORG 1000H 
+  TABLA DB  2,4,6,8,10,12,14,16,18,20 
+  FIN DB  ? 
+  TOTAL DB  ? 
+  MAX DB  13 
+ 
+ORG 2000H
+  MOV AL, 0 ;contador que almacena cantidad de numeros menores o iguales a MAX
+  MOV BX, OFFSET TABLA ;puntero a inicio de tabla
+  MOV CL, OFFSET FIN - OFFSET TABLA ;longitud de la tabla
+  MOV DL, MAX
+
+  LOOP:
+    ;verificar si el numero en [BX] es menor o igual a max (recordar que no puedo acceder a dos direcciones de memoria al mismo tiempo
+    CMP DL, [BX]
+    JNS MENOR_IGUAL
+    JZ MENOR_IGUAL
+    JMP SEGUIR
+    
+    MENOR_IGUAL:
+      INC AL ;si lo es, incremento AL
+      
+    SEGUIR:
+      INC BX ;incremento BX
+      DEC CL ;decremento CL
+      JNZ LOOP;si CL no es cero, vuelvo a loop
+
+  MOV TOTAL, AL ;mover contenido de AL a TOTAL
+    
+HLT 
+END

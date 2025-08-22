@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ProcesarPart
+comment1.params=jugadores\ cantJ
+comment1.target=int\ mas100part(Jugador[],\ int)
+numComments=2

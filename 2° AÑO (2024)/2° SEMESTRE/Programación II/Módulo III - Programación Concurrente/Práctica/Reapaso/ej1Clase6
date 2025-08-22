@@ -1,0 +1,122 @@
+programa ej1Clase6
+
+procesos
+  
+  proceso enviarIDs
+  comenzar
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,a1)
+    EnviarMensaje(4,a2)
+  fin
+  
+  proceso recorrerYTomarFlores(ES cantF:numero)
+  comenzar
+    repetir 99
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+        cantF:=cantF+1
+      mover
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantF:=cantF+1
+  fin
+  
+  proceso recorrerYTomarPapeles(ES cantP:numero)
+  comenzar
+    repetir 99
+      mientras HayPapelEnLaEsquina
+        tomarPapel
+        cantP:=cantP+1
+      mover
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+      cantP:=cantP+1  
+  fin
+  
+areas
+  av2: AreaP (2,1,2,100)
+  av3: AreaP (3,1,3,100)
+  ca98: AreaP (1,98,100,98)
+  ca99: AreaP (1,99,100,99)
+  esqFisc: AreaP (1,1,1,1)
+  
+robots
+
+  robot tipoRojo
+  variables
+    cantF:numero
+    id:numero
+  comenzar
+    cantF:=0
+    RecibirMensaje(id,rFisc)
+    recorrerYTomarFlores(cantF)         
+    EnviarMensaje(id,rFisc)
+    EnviarMensaje(cantF,rFisc)
+  fin
+  
+  robot tipoAzul
+  variables
+    cantP:numero
+    id:numero
+  comenzar
+    RecibirMensaje(id,rFisc)
+    cantP:=0
+    derecha
+    recorrerYTomarPapeles(cantP) 
+    EnviarMensaje(id,rFisc)
+    EnviarMensaje(cantP,rFisc)
+  fin
+  
+  robot tipoFisc
+  variables
+    cantElemR,cantElemA:numero
+    cantF,cantP:numero
+    id:numero
+  comenzar
+    enviarIDs
+    cantElemA:=0
+    cantElemR:=0
+    repetir 4
+      RecibirMensaje(id,*)
+      si id=1
+        RecibirMensaje(cantF,r1)
+        cantElemR:=cantElemR+cantF
+      sino
+        si id=2
+          RecibirMensaje(cantF,r2)
+          cantElemR:=cantElemR+cantF
+        sino
+          si id=3
+            RecibirMensaje(cantP,a1)
+            cantElemA:=cantElemA+cantP
+          sino
+            si id=4
+              RecibirMensaje(cantElemA,a2)
+              cantElemA:=cantElemA+cantP    
+    si cantElemR>cantElemA
+      Informar(0)
+    sino
+      si cantElemA>cantElemR
+        Informar(1) 
+  fin
+  
+variables
+  r1:tipoRojo
+  r2:tipoRojo
+  a1:tipoAzul
+  a2:tipoAzul
+  rFisc:tipoFisc
+  
+comenzar
+  AsignarArea(r1,av2)
+  AsignarArea(r2,av3)
+  AsignarArea(a1,ca98)
+  AsignarArea(a2,ca99)
+  AsignarArea(rFisc,esqFisc)
+  Iniciar(r1, 2,1)
+  Iniciar(r2, 3,1)
+  Iniciar(a1, 1,98)
+  Iniciar(a2, 1,99)
+  Iniciar(rFisc, 1,1)
+fin

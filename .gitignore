@@ -1,0 +1,101 @@
+# =====================
+# Ignorar documentos pesados
+# =====================
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# =====================
+# Archivos temporales / backups
+# =====================
+*.tmp
+*.bak
+*.swp
+*.log
+~$*
+
+# =====================
+# Archivos del sistema (Windows)
+# =====================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# =====================
+# Archivos de IDEs (Visual Studio Code, JetBrains, etc.)
+# =====================
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# =====================
+# Archivos de compilación (si usás C/C++/Java/etc.)
+# =====================
+*.o
+*.obj
+*.class
+*.exe
+*.out
+*.dll
+
+# =====================
+# Carpetas de compilación comunes
+# =====================
+bin/
+obj/
+build/
+dist/
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.tmp
+*.bak
+*.swp
+*.log
+~
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.BIN/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.o
+*.obj
+*.class
+*.exe
+*.out
+*.dll
+bin/
+obj/
+build/
+dist/
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.tmp
+*.bak
+*.swp
+*.log
+~
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.BIN/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.o

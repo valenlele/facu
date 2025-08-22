@@ -1,0 +1,32 @@
+10)
+
+ORG 1000H
+  FRASE DB "Organizacion y la Computacion" 
+  FIN DB ?
+
+ORG 2000H
+  MOV AX, OFFSET FIN - OFFSET FRASE ;longitud de la cadena
+  MOV BX, OFFSET FRASE ;apunta al inicio de cadena
+  MOV CX, 0 ;contador
+  
+  LOOP:
+    MOV DL, [BX]
+    CMP DL, 'a'
+    JNZ CONTINUAR
+    DEC AX
+    JZ FINALIZAR ;por si la ultima letra es 'a'
+    INC BX
+    MOV DL, [BX]
+    CMP DL, 'c'
+    JNZ CONTINUAR
+    INC CX
+
+  CONTINUAR:
+    INC BX
+    DEC AX
+    JNZ LOOP
+
+  FINALIZAR: 
+  
+  HLT
+  END

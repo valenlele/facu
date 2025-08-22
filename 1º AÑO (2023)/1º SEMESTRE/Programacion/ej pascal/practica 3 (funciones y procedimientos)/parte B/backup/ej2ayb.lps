@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej2ayb.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej4"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="16"/>
+        <CursorPos X="13" Y="26"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="11">
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="12" Column="52"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="24" Column="32" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="12" Column="39"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="29" Column="10" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="4" Column="14"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="12" Column="18" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="18" Column="89" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="17" Column="25" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="28" Column="12" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="20" Column="11" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="9" Column="16" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2ayb.lpr"/>
+        <Caret Line="28" Column="42" TopLine="17"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

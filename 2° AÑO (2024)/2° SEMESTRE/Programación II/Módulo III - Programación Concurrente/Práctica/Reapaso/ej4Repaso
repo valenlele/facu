@@ -1,0 +1,109 @@
+programa ej4Repaso
+
+procesos
+
+  proceso enviarEsqRobRandom(E id:numero)
+  variables
+    av,ca:numero
+  comenzar
+    Random(av,40,60)
+    Random(ca,40,60)
+    si id=1
+      EnviarMensaje(0,rFlorero1)
+      EnviarMensaje(av,rFlorero1)
+      EnviarMensaje(ca,rFlorero1)
+    sino
+      si id=2
+        EnviarMensaje(0,rFlorero2)
+        EnviarMensaje(av,rFlorero2)
+        EnviarMensaje(ca,rFlorero2)
+      sino  
+        si id=3
+          EnviarMensaje(0,rFlorero3)
+          EnviarMensaje(av,rFlorero3)
+          EnviarMensaje(ca,rFlorero3)
+  fin
+
+areas
+  cuadrante: AreaPC (40,40,60,60)
+  deposito: AreaP (10,10,10,10)
+  iFlorero1: AreaP (1,1,1,1)
+  iFlorero2: AreaP (2,1,2,1)
+  iFlorero3: AreaP (3,1,3,1)
+  iFiscal: AreaP (4,1,4,1)
+  
+robots
+
+  robot tipoFlorero
+  variables
+    av,ca:numero
+    avAct,caAct:numero
+    termine:numero
+  comenzar
+    RecibirMensaje(termine,rFiscal)
+    mientras (termine<>1)
+      RecibirMensaje(av,rFiscal)
+      RecibirMensaje(ca,rFiscal)
+      BloquearEsquina(av,ca)
+      avAct:=PosAv
+      caAct:=PosCa
+      Pos(av,ca)
+      mientras HayFlorEnLaEsquina
+        tomarFlor  
+      Pos(avAct,caAct)
+      LiberarEsquina(av,ca)
+      RecibirMensaje(termine,rFiscal)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)
+    EnviarMensaje(1,rFiscal)
+  fin
+  
+  robot tipoFiscal
+  variables
+    id:numero
+    cantF:numero
+    termine:numero
+  comenzar
+    cantF:=0
+    repetir 8
+      Random(id,1,3)
+      enviarEsqRobRandom(id)
+    EnviarMensaje(1,rFlorero1)
+    EnviarMensaje(1,rFlorero2)
+    EnviarMensaje(1,rFlorero3)
+    repetir 3
+      RecibirMensaje(termine,*)
+    Pos(10,10)
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantF:=cantF+1
+    Informar(cantF)
+  fin
+  
+variables
+  rFlorero1: tipoFlorero
+  rFlorero2: tipoFlorero
+  rFlorero3: tipoFlorero
+  rFiscal: tipoFiscal
+  
+comenzar
+  AsignarArea(rFlorero1, cuadrante)
+  AsignarArea(rFlorero1, iFlorero1)
+  AsignarArea(rFlorero1, deposito)
+  AsignarArea(rFlorero2, cuadrante)
+  AsignarArea(rFlorero2, iFlorero2)
+  AsignarArea(rFlorero2, deposito)
+  AsignarArea(rFlorero3, cuadrante)
+  AsignarArea(rFlorero3, iFlorero3)
+  AsignarArea(rFlorero3, deposito)
+  AsignarArea(rFiscal, iFiscal)
+  AsignarArea(rFiscal, deposito)
+  Iniciar(rFlorero1, 1,1)
+  Iniciar(rFlorero2, 2,1)
+  Iniciar(rFlorero3, 3,1)
+  Iniciar(rFiscal, 4,1)
+fin

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FiE:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Practica\Clase V\lib\x86_64-win64&quot; &quot;-FuE:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Practica\Clase V\&quot; &quot;-FUE:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Practica\Clase V\lib\x86_64-win64\&quot; &quot;-FEE:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Practica\Clase V\&quot; &quot;-oE:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Practica\Clase V\programaEncomiendas.exe&quot; programaEncomiendas.lpr"/>
+</CONFIG>

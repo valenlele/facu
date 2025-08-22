@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej3b.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="maxmin7"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="15"/>
+        <CursorPos X="47" Y="27"/>
+        <UsageCount Value="59"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="20" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="24" Column="37" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="29" Column="70" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="8" Column="39"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="30" Column="33" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="6" Column="9"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="19" Column="65" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="23" Column="57" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="26" Column="105" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="4" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="7" Column="5" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="14" Column="45" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="18" Column="12" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="20" Column="26" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="25" Column="13" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="26" Column="9" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="19" Column="17" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="18" Column="20" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="27" Column="36" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="15" Column="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="37" Column="89" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Column="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="16" Column="44" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="14" Column="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="20" Column="23" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="41" Column="25" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="14" Column="48"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="30" Column="77" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Column="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3b.lpr"/>
+        <Caret Line="19" Column="44" TopLine="7"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,29 @@
+ORG 1000H
+  MAN DB ?
+  EXP DB ?
+
+ORG 3000H
+  NORMALIZAR:
+    ;verifico si el ajuste es posible viendo si el exponente es 0
+    CMP AL, 0
+    JZ NO_VALIDO ;si no lo es, muevo a BL 0FFh y vuelvo
+    MOV BL, 00H ;sino, muevo a BL 00h, decremento el exponente y ajusto la mantisa
+    DEC AL
+    
+    ;ajustar la mantisa es mover todos los bits una posicion hacia la izquierda
+    ;esto se hace sumando a la mantisa por si misma
+    ADD AH, AH
+    RET
+
+    NO_VALIDO:
+      MOV BL, 0FFH
+      RET
+
+ORG 2000H
+  MOV AH, MAN
+  MOV AL, EXP
+
+  CALL NORMALIZAR
+
+HLT
+END

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="act4.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="203"/>
+        <CursorPos X="16" Y="217"/>
+        <FoldState Value=" T3S088 pj8k1064 PTZ0x"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="act4.lpr"/>
+        <Caret Line="193" Column="28" TopLine="159"/>
+      </Position>
+      <Position>
+        <Filename Value="act4.lpr"/>
+        <Caret Line="206" Column="33" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="act4.lpr"/>
+        <Caret Line="210" Column="15" TopLine="158"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

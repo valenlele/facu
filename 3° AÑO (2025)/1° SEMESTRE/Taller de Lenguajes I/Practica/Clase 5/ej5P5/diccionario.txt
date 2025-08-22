@@ -1,0 +1,10 @@
+arbol
+balon
+cascara
+diente
+elefante
+faro
+manopla
+tecla
+tubo
+zimbabue

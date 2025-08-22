@@ -1,0 +1,67 @@
+;EXPONENTE ENTRE 1 Y 254 , MANTISA CUALQUIER NUMERO --> NUMERO NORMALIZAD0
+
+;EXPONENTE 0 , MANTISA 0 --> 0
+
+;EXPONENTE 0 , MANTISA DISTINTA DE 0 --> NUMERO DENORMALIZADO
+
+;EXPONENTE 255 , MANTISA DISTINA DE 0 --> NaN
+
+;EXPONENTE 255, MANTISA 0 --> INFINITO
+
+ORG 1000H
+  NUM_L DW ?
+  NUM_H DW ?
+
+ORG 3000H
+  VERIFICAR_IEEE:
+    ;verifico si el exponente es 0
+    MOV DX, AX
+    AND DX, 7F80H
+    JZ EXP_CERO
+
+    ;si no lo es, verifico si es 255
+    MOV DX, AX
+    XOR DX, 7F80H
+    JZ EXP_255
+    
+    MOV CL, 4
+
+    RET
+    
+    EXP_CERO:
+      MOV DX, AX
+      AND DX, 007FH
+      JZ ES_CERO
+      MOV DX, BX
+      AND DX, 1111111111111111B
+      JZ ES_CERO
+      
+      MOV CL, 0
+
+    ES_CERO:
+      MOV CL, 3
+      RET
+
+    EXP_255:
+      MOV DX, AX
+      AND DX, 007FH
+      JZ ES_INFINITO
+      MOV DX, BX
+      AND DX, 1111111111111111B
+      JZ ES_INFINITO
+      
+      MOV CL, 2
+      
+      RET
+      
+   ES_INFINITO:
+     MOV CL, 1
+     RET
+
+ORG 2000H
+  MOV AX, NUM_H ;1 bit signo, 8 exponente, 7 bits mantisa
+  MOV BX, NUM_L ;16 bits mantisa
+  CALL VERIFICAR_IEEE
+
+HLT
+END

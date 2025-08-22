@@ -1,0 +1,21 @@
+8)
+
+ORG 1000H
+  DIR DW 1100H
+  MAX DB 50
+
+ORG 2000H
+  MOV BX, DIR
+  MOV AL, 0
+  LOOP: 
+    MOV [BX], AL
+    CMP AL, MAX
+    JZ END_LOOP
+    INC BX
+    ADD AL, 5
+    JMP LOOP
+  END_LOOP:
+    
+    
+HLT
+END

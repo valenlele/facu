@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Proyecto
+comment1.params=nom\ cod\ nomDirec
+comment1.target=Proyecto(java.lang.String,\ int,\ java.lang.String)
+comment10.params=nom
+comment10.target=void\ otorgarTodos(java.lang.String)
+comment11.params=
+comment11.target=double\ dineroTotalOtorgado()
+comment12.params=
+comment12.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=Proyecto()
+comment3.params=
+comment3.target=java.lang.String\ getNom()
+comment4.params=
+comment4.target=int\ getCod()
+comment5.params=
+comment5.target=java.lang.String\ getNomDirec()
+comment6.params=nom
+comment6.target=void\ setNom(java.lang.String)
+comment7.params=cod
+comment7.target=void\ setCod(int)
+comment8.params=nomDirec
+comment8.target=void\ setNomDirec(java.lang.String)
+comment9.params=inv
+comment9.target=void\ agregarInvestigador(Investigador)
+numComments=13

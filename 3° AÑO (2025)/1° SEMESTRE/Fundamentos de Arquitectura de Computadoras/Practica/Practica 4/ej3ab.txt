@@ -1,0 +1,80 @@
+3) 
+
+ORG 1000H
+INI DB 0
+FIN DB 15
+
+ORG 2000H
+
+MOV AL, INI
+MOV AH, FIN
+SUMA: INC AL
+CMP AL, AH
+JNZ SUM
+HLT
+END
+
+a) El lazo (SUMA) se repite 15 veces. La instruccion de salto (JNZ SUM) se ejecuta 14 veces.
+
+b) 
+
+*JS SUM:
+
+ORG 1000H
+INI DB 0
+FIN DB 15
+
+ORG 2000H
+
+MOV AL, INI
+MOV AH, FIN
+SUMA: INC AL
+CMP AL, AH
+JS SUM
+HLT
+END
+
+Contendido final de AL = 0Fh
+
+
+*JZ SUM:
+
+ORG 1000H
+INI DB 0
+FIN DB 15
+
+ORG 2000H
+
+MOV AL, INI
+MOV AH, FIN
+SUMA: INC AL
+CMP AL, AH
+JZ SUM
+HLT
+END
+
+Contenido final de AL = 1h
+
+
+*JMP SUM
+
+ORG 1000H
+INI DB 0
+FIN DB 15
+
+ORG 2000H
+
+MOV AL, INI
+MOV AH, FIN
+SUMA: INC AL
+CMP AL, AH
+JMP SUM
+HLT
+END
+
+Contenido final de AL = indefinido
+
+
+
+
+

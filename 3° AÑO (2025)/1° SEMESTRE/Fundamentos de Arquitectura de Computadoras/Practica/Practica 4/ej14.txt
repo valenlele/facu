@@ -1,0 +1,32 @@
+14)
+
+ORG 2000H
+  MOV AH, 01110010B ;valor mantisa
+  MOV AL, 11001000B ;valor exponente
+  MOV BL, 00H
+
+  CALL DEC_EXP
+
+  JMP FIN_PROGRAMA
+
+ORG 3000H
+  DEC_EXP:
+    CMP AL, 0 ;verifico si el ajuste es posible (el exponente es 0)
+    JZ NO_NORMALIZACION ;si no lo es
+
+    ;si la normalizacion es posible
+    DEC AL ;decremento en uno el valor del exponente
+    ADD AH, AH ;desplazar bits de mantisa una posicion hacia la izquierda (equivalente a multlipicar por 2)
+
+    JMP FIN
+
+    NO_NORMALIZACION:
+      MOV BL, 0FFH
+      JMP FIN
+
+    FIN:
+      RET
+
+  FIN_PROGRAMA:  
+HLT
+END

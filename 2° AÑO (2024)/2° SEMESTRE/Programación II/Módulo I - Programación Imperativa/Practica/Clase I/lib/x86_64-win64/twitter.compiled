@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1497193866"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -l -vewnhibq &quot;-FiD:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Módulo I - Programación Imperativa\Practica\Clase I\lib\x86_64-win64&quot; &quot;-FuD:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Módulo I - Programación Imperativa\Practica\Clase I\&quot; &quot;-FUD:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Módulo I - Programación Imperativa\Practica\Clase I\lib\x86_64-win64\&quot; &quot;-FED:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Módulo I - Programación Imperativa\Practica\Clase I\&quot; &quot;-oD:\valentino\facu\2° AÑO (2024)\2° SEMESTRE\Programación II\Módulo I - Programación Imperativa\Practica\Clase I\twitter.exe&quot; twitter.lpr"/>
+</CONFIG>

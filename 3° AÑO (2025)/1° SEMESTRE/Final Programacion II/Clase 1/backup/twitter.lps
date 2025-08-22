@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="twitter.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="250"/>
+        <CursorPos X="40" Y="269"/>
+        <FoldState Value=" T3i0086 piejO0E2 Pdb0n"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\5dfe6625-0ae5-427c-a157-c235be80cc40_x (2).zip.c40\x.pas"/>
+        <UnitName Value="X"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="121"/>
+        <CursorPos X="50" Y="125"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="121" Column="70" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="130" Column="29" TopLine="128"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="146" Column="44" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="150" Column="62" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="170" Column="49" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="197" Column="61" TopLine="186"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="76" Column="17" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="87" Column="89" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="139" Column="74" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="174" Column="24" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="145" Column="37" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="146" Column="7" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="145" Column="47" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="147" Column="41" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="149" Column="19" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="155" Column="80" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="162" Column="7" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="163" Column="37" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="231" Column="16" TopLine="215"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="141" Column="49" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="161" Column="60" TopLine="149"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="163" Column="46" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="139" Column="70" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="228" Column="54" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="215" Column="19" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="224" Column="38" TopLine="219"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="231" Column="22" TopLine="222"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="232" Column="23" TopLine="220"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="233" Column="42" TopLine="221"/>
+      </Position>
+      <Position>
+        <Filename Value="twitter.lpr"/>
+        <Caret Line="268" Column="28" TopLine="250"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

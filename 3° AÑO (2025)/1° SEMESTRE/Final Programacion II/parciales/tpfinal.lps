@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="tpfinal.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="487"/>
+        <CursorPos X="31" Y="492"/>
+        <FoldState Value=" T3iT074 pj0jH0h9 piXkA05A]9bjL0bs"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\Downloads\tpfinal (1).pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="116"/>
+        <CursorPos X="31" Y="227"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\81c706af-2155-4e61-8288-b52cec54ad40_tpfinal.zip.d40\tpfinal.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="58"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\1b9f3ef4-3a07-43de-8b68-c425deaac411_tpfinal.zip.411\tpfinal.lpr"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="6">
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="371" Column="54" TopLine="363"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="485" Column="55" TopLine="469"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="399" Column="15" TopLine="387"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="416" Column="49" TopLine="400"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="436" Column="44" TopLine="416"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="488" Column="45" TopLine="478"/>
+      </Position>
+      <Position>
+        <Filename Value="tpfinal.lpr"/>
+        <Caret Line="492" Column="55" TopLine="487"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

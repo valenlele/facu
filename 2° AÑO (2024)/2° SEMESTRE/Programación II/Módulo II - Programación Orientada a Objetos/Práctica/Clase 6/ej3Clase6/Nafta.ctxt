@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Nafta
+comment1.params=nroSurtidor\ impTot\ dni\ nombre\ apellido\ cantLitros
+comment1.target=Nafta(int,\ double,\ int,\ java.lang.String,\ java.lang.String,\ double)
+comment2.params=
+comment2.target=Nafta()
+comment3.params=
+comment3.target=double\ getCantLitros()
+comment4.params=cantLitros
+comment4.target=void\ setCantLitros(double)
+comment5.params=
+comment5.target=void\ calcularImpuestoAPagar()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

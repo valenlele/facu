@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej3"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="26"/>
+        <CursorPos X="64" Y="35"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="24">
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="36" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="55" Column="22" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="49" Column="43" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="37" Column="48" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="54" Column="14" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="55" Column="21" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="32" Column="5" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="27" Column="7" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="47" Column="3" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="53" Column="19" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="19" Column="43" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="51" Column="12" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="53" Column="20" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="42" Column="3" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="55" Column="17" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="52" Column="10" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="55" Column="17" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="5" Column="12"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="9" Column="28"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="10" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="44" Column="21" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="37" Column="25" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="44" Column="16" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="53" Column="35" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3sincompletar.lpr"/>
+        <Caret Line="38" Column="42" TopLine="29"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ej3sincompletar.lpr"/>
+        <Line Value="51"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

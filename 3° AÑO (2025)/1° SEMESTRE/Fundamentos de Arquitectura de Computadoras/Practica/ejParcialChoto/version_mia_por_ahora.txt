@@ -1,0 +1,58 @@
+version_mia_por_ahora
+
+ORG 1000H
+VECTOR1 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+VECTOR2 DW ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+RESULTADOS DB ?
+
+ORG 2000H
+  MOV AX, OFFSET VECTOR1 ;AX = direccion vector1
+  MOV BX, OFFSET VECTOR2 ;BX = direccion vector2
+  MOV CX, OFFSET RESULTADOS ;CX = direcccion vector resultados
+  MOV DX, 6 ;DX = contador de elementos
+
+  LOOP:
+    PUSH AX ;guardo direccion de vector1 ya que AX lo voy a usar para devolver la parte baja del resultado
+    PUSH BX ;guardo direccion de vector2 ya que BX lo voy a usar para hacer direccionamiento indirecto
+    PUSH CX ;guardo direccion de vector resultado ya que CX lo voy a usar para almacenar temporalmente la parta alta del resultado
+    PUSH DX ;guardo direccion del contador ya que DX lo voy a usar para devolver la parte alta del resultado
+    
+    CALL SUMA_32
+
+    DEC DX ;decremento contador
+    JNZ LOOP
+
+ORG 3000H
+  ;retorna por valor por registro:
+  ;AX = parte baja del resultado
+  ;DX = parte alta del resultado
+  SUMA_32:
+    PUSH BX ;guardo direccion del segundo numero
+
+    ;cargar primer numero
+    MOV BX, AX ;guardo direccion del primer numero en BX para hacer el direccionamineto indirecto
+    MOV AX, [BX] ;AX = parte baja primer numero
+    MOV CX, [BX+2] ;parte alta primer numero
+
+    POP BX ;recupero direccion segundo numero
+
+    ADD AX, [BX] ;sumo partes bajas
+
+    JNC SIN_CARRY
+
+    ;hay carry
+    ADD CX, [BX+2]
+    INC CX
+    JMP FIN_SUMA
+
+  SIN_CARRY:
+    ADD CX, [BX+2] ;sumo partes altas sin tener en cuenta el carry
+
+  FIN_SUMA:
+    MOV DX, CX ;DX = parte alta del resultado
+    
+
+  RET
+
+HLT
+END

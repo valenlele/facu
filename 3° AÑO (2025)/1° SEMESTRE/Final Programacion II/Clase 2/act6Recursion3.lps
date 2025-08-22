@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="act6Recursion3.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Recursion"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="21" Y="13"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\450e63a7-7fd2-44c7-a813-d5e4166a1cf3_Programas Clase 2.zip.cf3\Programas Clase 2\ProgramaRecursion.pas"/>
+        <UnitName Value="Recursion"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos Y="26"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\valen\AppData\Local\Temp\15df2aab-f496-438a-abf5-bfea67ccc5b4_Programas Clase 2.zip.5b4\Programas Clase 2\ProgramaRecursion.pas"/>
+        <UnitName Value="Recursion"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos Y="26"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="act6Recursion3.lpr"/>
+        <Caret Line="14" Column="42"/>
+      </Position>
+      <Position>
+        <Filename Value="act6Recursion3.lpr"/>
+        <Caret Line="15" Column="17" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="act6Recursion3.lpr"/>
+        <Caret Line="25" Column="75" TopLine="5"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

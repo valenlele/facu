@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Automotor
+comment1.params=a\u00F1o\ imp\ p\ pat\ impAd\ desc
+comment1.target=Automotor(int,\ double,\ Propietario,\ java.lang.String,\ double,\ java.lang.String)
+comment2.params=
+comment2.target=Automotor()
+comment3.params=
+comment3.target=java.lang.String\ getPat()
+comment4.params=
+comment4.target=double\ getImpAd()
+comment5.params=
+comment5.target=java.lang.String\ getDesc()
+comment6.params=pat
+comment6.target=void\ setPat(java.lang.String)
+comment7.params=impAd
+comment7.target=void\ setImpAd(double)
+comment8.params=desc
+comment8.target=void\ setDesc(java.lang.String)
+comment9.params=
+comment9.target=double\ calcularCostosImpuestos()
+numComments=10

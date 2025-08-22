@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej3ab.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej5ayb"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="25" Y="12"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="9">
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="7" Column="60"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="33" Column="10" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="16" Column="18" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="27" Column="20" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="16" Column="11" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="24" Column="32" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="29" Column="22" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="27" Column="80" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3ab.lpr"/>
+        <Caret Line="25" Column="83" TopLine="13"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

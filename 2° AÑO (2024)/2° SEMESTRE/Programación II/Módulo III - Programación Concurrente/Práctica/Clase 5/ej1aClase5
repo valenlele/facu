@@ -1,0 +1,62 @@
+programa ej1aClase5
+
+procesos
+
+  proceso tomarFlores
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor 
+  fin
+  
+  proceso recorrerYTomar
+  comenzar
+    repetir 2
+      repetir 20
+        tomarFlores
+        mover
+      derecha
+      repetir 15
+        tomarFlores  
+        mover
+      derecha
+  fin
+  
+  proceso depositarEnEsq
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)  
+  fin
+  
+areas
+  p1: AreaP (15,15,30,35)
+  p2: AreaP (40,40,55,60)
+  esq10: AreaC (10,10,10,10)
+  
+robots
+  robot tipoR
+  comenzar
+    recorrerYTomar 
+    depositarEnEsq
+  fin
+  
+variables
+  robot1:tipoR
+  robot2:tipoR
+  
+comenzar
+  AsignarArea(robot1, p1)
+  AsignarArea(robot1,esq10)
+  AsignarArea(robot2, p2)
+  AsignarArea(robot2,esq10)
+  Iniciar(robot1, 15,15)
+  Iniciar(robot2, 40,40)
+fin

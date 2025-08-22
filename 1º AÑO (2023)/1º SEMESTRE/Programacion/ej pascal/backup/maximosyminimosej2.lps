@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="maximominimoej3"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="42" Y="17"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="5">
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="8" Column="28" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="7" Column="12"/>
+      </Position>
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="13" Column="23"/>
+      </Position>
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="14" Column="25" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="10" Column="5" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="maximosyminimosej2.lpr"/>
+        <Caret Line="18" TopLine="8"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

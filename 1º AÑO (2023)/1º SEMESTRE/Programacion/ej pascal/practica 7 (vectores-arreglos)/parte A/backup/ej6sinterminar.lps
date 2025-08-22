@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej6"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="67"/>
+        <CursorPos X="65" Y="71"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="57" Column="62" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="40" Column="14" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="44" Column="16" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="31" Column="12" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="50" Column="7" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="56" Column="24" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="47" Column="30" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="39" Column="13" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="ej6sinterminar.lpr"/>
+        <Caret Line="72" Column="54" TopLine="63"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="project1.lpr"/>
+        <Line Value="11"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

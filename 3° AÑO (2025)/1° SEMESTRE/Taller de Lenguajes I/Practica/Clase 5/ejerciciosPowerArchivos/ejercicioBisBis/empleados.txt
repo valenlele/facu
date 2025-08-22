@@ -1,0 +1,5 @@
+manoloa 	 diaz 	 3 	 12000.000000 	 
+juan 	 perez 	 1 	 10000.000000 	 
+manuela 	 juarez 	 2 	 20000.000000 	 
+valen} 	 capuzzi 	 4 	 20000.000000 	 
+juan 	 carlos 	 2 	 40000.000000 	 

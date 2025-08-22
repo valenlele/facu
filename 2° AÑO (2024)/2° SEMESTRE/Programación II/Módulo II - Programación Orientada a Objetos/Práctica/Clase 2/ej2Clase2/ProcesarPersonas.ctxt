@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ProcesarPersonas
+comment1.params=
+comment1.target=void\ insertarPersonas()
+comment2.params=
+comment2.target=int\ Mayores65()
+comment3.params=
+comment3.target=Persona\ MenorDNI()
+numComments=4

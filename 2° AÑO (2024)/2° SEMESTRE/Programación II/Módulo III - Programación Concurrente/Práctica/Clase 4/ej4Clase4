@@ -1,0 +1,147 @@
+programa ej4Clase4
+  
+procesos
+  proceso agarrarYAvanzar(ES hayPapel:boolean; ES recorrido:numero)
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(11,11)
+    Pos(11,11)
+    si HayPapelEnLaEsquina
+      hayPapel:=HayPapelEnLaEsquina
+      tomarPapel
+      Pos(avAct,caAct)
+      LiberarEsquina(11,11)
+      depositarPapel
+      recorrido:=recorrido+1
+      mover
+    sino
+      hayPapel:=HayPapelEnLaEsquina
+      Pos(avAct,caAct)
+      LiberarEsquina(11,11)  
+  fin  
+  
+  proceso calcularMax(E r1:numero ; E r2:numero ; E r3:numero ; E r4:numero ; ES maxR:numero)
+  comenzar
+    si r1>=r2
+      si r1>=r3
+        si r1>=r4
+          maxR:=1
+        sino
+          maxR:=4
+      sino
+        si r3>r4
+          maxR:=3
+    sino
+      si r2>=r3
+        si r2>=r4
+          maxR:=2
+        sino
+          maxR:=4
+      sino
+        si r3>=r4
+          maxR:=3
+        sino
+          maxR:=4
+  fin
+  
+areas
+  av4: AreaP (4,1,4,100)
+  av6: AreaP (6,1,6,100)
+  av8: AreaP (8,1,8,100)
+  av10: AreaP (10,1,10,100)
+  esqPap: AreaP (11,11,11,11)
+  esqC: AreaP (1,1,1,1)
+  
+robots
+  
+  robot tipo1
+  variables
+    hayPapel:boolean
+    recorrido:numero
+  comenzar
+    recorrido:=0
+    agarrarYAvanzar(hayPapel,recorrido)
+    mientras (hayPapel) & (recorrido<99)
+      agarrarYAvanzar(hayPapel,recorrido)
+    EnviarMensaje(recorrido,robotC)
+  fin
+  
+  robot tipo2
+  variables
+    hayPapel:boolean
+    recorrido:numero
+  comenzar
+    recorrido:=0
+    agarrarYAvanzar(hayPapel,recorrido)
+    mientras (hayPapel) & (recorrido<99)
+      agarrarYAvanzar(hayPapel,recorrido)
+    EnviarMensaje(recorrido,robotC)
+  fin
+  
+  robot tipo3
+  variables
+    hayPapel:boolean
+    recorrido:numero
+  comenzar
+    recorrido:=0
+    agarrarYAvanzar(hayPapel,recorrido)
+    mientras (hayPapel) & (recorrido<99)
+      agarrarYAvanzar(hayPapel,recorrido)
+    EnviarMensaje(recorrido,robotC)
+  fin
+  
+  robot tipo4
+  variables
+    hayPapel:boolean
+    recorrido:numero
+  comenzar
+    recorrido:=0
+    agarrarYAvanzar(hayPapel,recorrido)
+    mientras (hayPapel) & (recorrido<99)
+      agarrarYAvanzar(hayPapel,recorrido)
+    EnviarMensaje(recorrido,robotC)
+  fin
+  
+  robot tipoC
+  variables
+    maxR:numero
+    r1:numero
+    r2:numero    
+    r3:numero
+    r4:numero
+  comenzar
+    RecibirMensaje(r1,robot1)
+    RecibirMensaje(r2,robot2)
+    RecibirMensaje(r3,robot3)
+    RecibirMensaje(r4,robot4)
+    calcularMax(r1,r2,r3,r4,maxR)
+    Informar(maxR)
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4:tipo4
+  robotC:tipoC
+  
+comenzar
+  AsignarArea(robot1, av4)
+  AsignarArea(robot1,esqPap)
+  AsignarArea(robot2, av6)
+  AsignarArea(robot2,esqPap)
+  AsignarArea(robot3, av8)
+  AsignarArea(robot3,esqPap)
+  AsignarArea(robot4, av10)
+  AsignarArea(robot4,esqPap)
+  AsignarArea(robotC,esqC)
+  Iniciar(robot1, 4,1)
+  Iniciar(robot2, 6,1)
+  Iniciar(robot3, 8,1)
+  Iniciar(robot4, 10,1)
+  Iniciar(robotC, 1,1)
+fin

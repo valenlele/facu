@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Carrera
+comment1.params=lugar\ vecPiloto
+comment1.target=Carrera(java.lang.String,\ Piloto[])
+comment2.params=
+comment2.target=Carrera()
+comment3.params=
+comment3.target=java.lang.String\ getLugar()
+comment4.params=lugar
+comment4.target=void\ setLugar(java.lang.String)
+comment5.params=
+comment5.target=Piloto[]\ getVecPiloto()
+comment6.params=vecPiloto
+comment6.target=void\ setVecPiloto(Piloto[])
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

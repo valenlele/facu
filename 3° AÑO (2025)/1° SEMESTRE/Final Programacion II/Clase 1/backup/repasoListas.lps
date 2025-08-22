@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="repasoListas.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="235"/>
+        <CursorPos X="25" Y="250"/>
+        <FoldState Value=" T3i00801613 PjYke0*"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="6">
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="222" Column="53" TopLine="232"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="218" Column="47" TopLine="147"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="221" Column="74" TopLine="196"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="238" Column="39" TopLine="213"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="255" Column="23" TopLine="246"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="239" Column="53" TopLine="185"/>
+      </Position>
+      <Position>
+        <Filename Value="repasoListas.lpr"/>
+        <Caret Line="234" Column="21" TopLine="164"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

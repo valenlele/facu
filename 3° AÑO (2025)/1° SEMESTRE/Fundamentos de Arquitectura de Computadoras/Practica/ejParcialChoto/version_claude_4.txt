@@ -1,0 +1,105 @@
+version_claude_4
+
+ORG 1000H
+VECTOR1 DW 1234h, 0000h    ; elemento 0: 00001234h
+        DW 5678h, 0001h    ; elemento 1: 00015678h  
+        DW 9ABCh, 0002h    ; elemento 2: 00029ABCh
+        DW DEF0h, 0003h    ; elemento 3: 0003DEF0h
+        DW 1111h, 0004h    ; elemento 4: 00041111h
+        DW 2222h, 0005h    ; elemento 5: 00052222h
+
+VECTOR2 DW 1000h, 0000h    ; elemento 0: 00001000h
+        DW 2000h, 0000h    ; elemento 1: 00002000h
+        DW 3000h, 0000h    ; elemento 2: 00003000h
+        DW 4000h, 0000h    ; elemento 3: 00004000h
+        DW 5000h, 0000h    ; elemento 4: 00005000h
+        DW 6000h, 0000h    ; elemento 5: 00006000h
+
+RESULTADOS DW 12 DUP(?)    ; 12 palabras = 6 elementos de 32 bits
+
+ORG 2000H
+INICIO:
+    ; Inicializar direcciones base en registros
+    MOV AX, OFFSET VECTOR1   ; AX = dirección base vector1
+    MOV BX, OFFSET VECTOR2   ; BX = dirección base vector2  
+    MOV CX, OFFSET RESULTADOS ; CX = dirección base resultados
+    MOV DX, 6                ; DX = contador de elementos
+
+BUCLE:
+    PUSH AX                  ; Guardar dirección vector1
+    PUSH BX                  ; Guardar dirección vector2
+    PUSH CX                  ; Guardar dirección resultados
+    PUSH DX                  ; Guardar contador
+    
+    ; Pasar parámetros por referencia por registro
+    ; AX ya tiene dirección del elemento actual de VECTOR1
+    ; BX ya tiene dirección del elemento actual de VECTOR2
+    CALL SUMA32
+    
+    ; AX = parte baja resultado, DX = parte alta resultado
+    POP BX                   ; Recuperar contador en BX temporalmente
+    POP CX                   ; Recuperar dirección resultados
+    
+    ; Almacenar resultado
+    PUSH BX                  ; Guardar contador de nuevo
+    MOV BX, CX              ; BX = dirección donde guardar resultado
+    MOV [BX], AX            ; Guardar parte baja
+    MOV [BX+2], DX          ; Guardar parte alta
+    
+    ; Avanzar punteros (4 bytes por elemento de 32 bits)
+    ADD CX, 4               ; Siguiente posición en resultados
+    POP DX                  ; Recuperar contador
+    POP BX                  ; Recuperar dirección vector2
+    POP AX                  ; Recuperar dirección vector1
+    
+    ADD AX, 4               ; Siguiente elemento vector1
+    ADD BX, 4               ; Siguiente elemento vector2
+    
+    DEC DX                  ; Decrementar contador
+    JNZ BUCLE               ; Continuar si no terminó
+    
+    INT 0                   ; Fin del programa
+
+; Subrutina: suma de números de 32 bits
+; Parámetros por referencia por registro:
+;   AX = dirección del primer número de 32 bits
+;   BX = dirección del segundo número de 32 bits  
+; Retorna por valor por registro:
+;   AX = parte baja del resultado
+;   DX = parte alta del resultado
+SUMA32:
+    PUSH BX                 ; Guardar BX original
+    PUSH CX                 ; Guardar CX para uso temporal
+    
+    ; Cargar primer número (usar BX para acceso indirecto)
+    MOV BX, AX             ; BX = dirección primer número
+    MOV AX, [BX]           ; AX = parte baja primer número
+    MOV CX, [BX+2]         ; CX = parte alta primer número
+    
+    ; Obtener dirección del segundo número
+    POP BX                 ; Recuperar dirección segundo número del stack
+    PUSH BX                ; Volverla a guardar para restaurar al final
+    
+    ; Sumar segundo número
+    ADD AX, [BX]           ; Sumar partes bajas
+    
+    ; Manejar carry para parte alta
+    JNC SIN_CARRY          ; Si no hay carry, saltar
+    
+    ; Hay carry
+    ADD CX, [BX+2]         ; Sumar partes altas  
+    INC CX                 ; Agregar el carry
+    JMP FIN_SUMA
+    
+SIN_CARRY:
+    ADD CX, [BX+2]         ; Solo sumar partes altas
+    
+FIN_SUMA:
+    MOV DX, CX             ; DX = parte alta del resultado
+    ; AX ya tiene parte baja del resultado
+    
+    POP CX                 ; Restaurar CX
+    POP BX                 ; Restaurar BX
+    RET
+
+END INICIO

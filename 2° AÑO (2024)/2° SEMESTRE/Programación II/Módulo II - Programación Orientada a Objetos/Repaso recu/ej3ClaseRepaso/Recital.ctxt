@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Recital
+comment1.params=nomBanda\ cantTemas
+comment1.target=Recital(java.lang.String,\ int)
+comment2.params=
+comment2.target=Recital()
+comment3.params=
+comment3.target=java.lang.String\ getNomBanda()
+comment4.params=
+comment4.target=int\ getCantTemas()
+comment5.params=nomBanda
+comment5.target=void\ setNomBanda(java.lang.String)
+comment6.params=cantTemas
+comment6.target=void\ setCantTemas(int)
+comment7.params=nombreTema
+comment7.target=void\ agregarTema(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ actuar()
+comment9.params=
+comment9.target=double\ calcularCosto()
+numComments=10

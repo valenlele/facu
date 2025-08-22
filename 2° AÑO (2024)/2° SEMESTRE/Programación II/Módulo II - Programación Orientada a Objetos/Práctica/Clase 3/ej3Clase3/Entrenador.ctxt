@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Entrenador
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment2.params=
+comment2.target=int\ getSueldoB()
+comment3.params=
+comment3.target=int\ getcantCamp()
+comment4.params=unNombre
+comment4.target=void\ setNombre(java.lang.String)
+comment5.params=unSueldoB
+comment5.target=void\ setSueldoB(int)
+comment6.params=unaCantCamp
+comment6.target=void\ setCantCamp(int)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

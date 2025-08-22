@@ -1,0 +1,98 @@
+programa ej2Clase6
+
+procesos
+  
+  proceso enviarMensajes(E id:numero)
+  comenzar
+    si id=1
+      EnviarMensaje(0,rReco2)
+      EnviarMensaje(0,rReco3)
+    sino
+      si id=2
+        EnviarMensaje(0,rReco1)
+        EnviarMensaje(0,rReco3)
+      sino
+        si id=3
+          EnviarMensaje(0,rReco1)
+          EnviarMensaje(0,rReco2)
+  fin
+  
+areas
+  ca1: AreaP (1,1,100,1)
+  ca2: AreaP (1,2,100,2)
+  ca3: AreaP (1,3,100,3)
+  depo: AreaP (50,50,50,50)
+  iFisc: AreaP (1,4,1,4)
+  
+robots
+
+  robot tipoRecolector
+  variables
+    id:numero
+    recorrido:numero
+    avAct,caAct:numero
+    avanzar,termine:numero
+  comenzar
+    RecibirMensaje(id,rFisc)
+    derecha
+    mientras (PosAv<=99)
+      recorrido:=0
+      mientras (PosAv<=99) & (recorrido<10)
+        mientras HayFlorEnLaEsquina
+          tomarFlor
+        mientras HayPapelEnLaEsquina
+          tomarPapel
+        mover
+        recorrido:=recorrido+1
+      BloquearEsquina(50,50)
+      avAct:=PosAv
+      caAct:=PosCa
+      Pos(50,50)
+      mientras HayFlorEnLaBolsa
+        depositarFlor
+      Pos(avAct,caAct)
+      LiberarEsquina(50,50)
+      enviarMensajes(id)
+      repetir 2
+        RecibirMensaje(avanzar,*)
+    EnviarMensaje(termine,rFisc)
+  fin
+  
+  robot tipoFisc
+  variables
+    termine:numero
+    cantF:numero
+  comenzar 
+    cantF:=0
+    EnviarMensaje(1,rReco1)
+    EnviarMensaje(2,rReco2)
+    EnviarMensaje(3,rReco3)
+    repetir 3
+      RecibirMensaje(termine,*)
+    Pos(50,50)
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantF:=cantF+1
+    Informar(cantF)   
+  fin
+  
+variables
+  rReco1:tipoRecolector
+  rReco2:tipoRecolector
+  rReco3:tipoRecolector
+  rFisc:tipoFisc
+  
+comenzar
+  AsignarArea(rReco1,ca1)
+  AsignarArea(rReco1,depo)
+  AsignarArea(rReco2,ca2)
+  AsignarArea(rReco2,depo)
+  AsignarArea(rReco3,ca3)
+  AsignarArea(rReco3,depo)
+  AsignarArea(rFisc,iFisc)
+  AsignarArea(rFisc,depo)
+  Iniciar(rReco1, 1,1)
+  Iniciar(rReco2, 1,2)
+  Iniciar(rReco3, 1,3)
+  Iniciar(rFisc, 1,4)
+fin

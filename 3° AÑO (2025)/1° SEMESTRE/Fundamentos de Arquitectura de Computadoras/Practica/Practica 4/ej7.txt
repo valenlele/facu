@@ -1,0 +1,19 @@
+7) 
+
+ORG 2000H
+ MOV AX, 1
+ MOV BX, 1000h
+CARGA: MOV [BX], AX
+       ADD BX, 2
+       ADD AX, AX
+       CMP AX, 200
+       JS CARGA
+       HLT
+       END
+
+a) Los elementos del arreglo son potencias de 2 hasta 128 (ya que 128 + 128 = 256 el cual es > 200 y por lo tanto el flag S da 0 y no se salta a carga). 
+
+b) La tabla se crea a partir de la celda 1000h. La long de cada elemento es de 16 bits (2 bytes)
+
+c) La longitud de la tabla es de 8 elementos. La cantidad de elementos depende de el valor inicial almacenado en AX, la suma de AX con AX, y la comparacion con 200 del ultimo numero sumado.
+

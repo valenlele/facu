@@ -1,0 +1,21 @@
+ORG 1000h         
+NUM0 DB    0CAh   
+NUM1 DB    0
+NUM2 DW    ?      
+NUM3 DW    0ABCDh 
+NUM4 DW    ? 
+
+ORG 2000H  
+MOV BL, NUM0        ; mueve el contenido de la variable NUM0 al registro BL. Direccionamiento directo. 
+MOV BH, 0FFh        ; mueve el numero hexadecimal 0FFh al registro BH. Direccionamiento inmediato.
+MOV CH, BL          ; mueve el contenido del registro BL al registro CH. Direccionamiento via registro.
+MOV AX, BX          ; mueve el contenido del registro BX al registro AX. Direccionamiento via registro.
+MOV NUM1, AL        ; mueve el contenido del registro AL a la variable NUM1. Direccionamiento directo
+MOV NUM2, 1234h     ; mueve el numero hexadecimal 1234h a la variable NUM2. Direccionamiento directo
+MOV BX, OFFSET NUM3 ; mueve la direccion de memoria donde esta almacenado NUM3 al registro BX. Direccionamiento inmediato
+MOV DL, [BX]        ; mueve el contenido de la direccion de memoria almacenada en BX a DL (Interpreto lo que esta en BX como una direccion de memoria). Direccionamiento indirecto via registro
+MOV AX, [BX]        ; interpreta lo que esta en BX como una direccion de memoria, va a esa direccion de memoria, y mueve lo que esta ahi a AX. Como lo que esta en BX es de 1 byte y AX almacena 2 bytes, me traigo lo que esta en la direccion almacenada or BX y su siguiente. Direccionamiento indirecto via registro
+MOV BX, 1006h       ; mueve el valor hexadecimal 1006h al registro BX. Direccionamiento inmediato
+MOV WORD PTR [BX], 0CDEFh ; en la direccion almacenada en BX llevo el valor 0CDEFh. Direccionamiento indirecto via registro. WORD PTR avisa que voy a mover un dato de 2 bytes
+HLT
+END

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ProcesarTriangulo
+comment1.params=
+comment1.target=void\ crearTriangulo()
+comment2.params=
+comment2.target=double\ calcularArea()
+comment3.params=
+comment3.target=double\ calcularPerimetro()
+numComments=4

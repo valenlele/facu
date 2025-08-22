@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej5abyc.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej6"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="7" Y="17"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="5">
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="4" Column="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="17" Column="90"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="14" Column="19" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="15" Column="64" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="17" Column="38" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="ej5abyc.lpr"/>
+        <Caret Line="14" Column="40" TopLine="4"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

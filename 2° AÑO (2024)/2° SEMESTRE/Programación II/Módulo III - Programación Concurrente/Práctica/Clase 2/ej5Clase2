@@ -1,0 +1,121 @@
+programa ej5Clase2
+
+procesos
+  proceso recorrerCalle(E nroEsq:numero)
+  comenzar
+    repetir nroEsq
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+      mover   
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+  fin
+  
+  proceso recorrerAvenida(E nroEsq:numero)
+  comenzar
+    repetir nroEsq
+      mientras HayPapelEnLaEsquina
+        tomarPapel
+      mover   
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+  fin
+  
+  proceso depositarFlores
+  comenzar
+    mientras HayFlorEnLaBolsa
+      depositarFlor  
+  fin
+  
+  proceso depositarPapeles
+  comenzar
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+  fin
+  
+areas
+  ca75: AreaP (1,75,15,75)
+  ca80: AreaP (1,80,15,80)
+  av75: AreaP (75,80,75,100)
+  av80: AreaP (80,80,80,100)
+  ca10: AreaP (70,10,100,10)
+  ca15: AreaP (70,15,100,15)
+  av10: AreaP (10,1,10,10)
+  av15: AreaP (15,1,15,10)
+  
+robots
+  robot tipo1
+  variables
+    nroEsq:numero
+  comenzar
+    nroEsq:=14
+    derecha
+    recorrerCalle(nroEsq)
+    depositarFlores
+    Pos(1,80)
+    recorrerCalle(nroEsq)
+    depositarFlores
+  fin
+  
+  robot tipo2
+  variables
+    nroEsq:numero
+  comenzar
+    nroEsq:=20
+    recorrerAvenida(nroEsq)
+    Pos(75,80)
+    depositarPapeles
+    Pos(80,80)
+    recorrerAvenida(nroEsq)
+    Pos(80,80)
+    depositarPapeles
+  fin
+  
+  robot tipo3
+  variables
+    nroEsq:numero
+  comenzar
+    nroEsq:=30
+    derecha
+    recorrerCalle(nroEsq)
+    depositarFlores
+    Pos(70,15)
+    recorrerCalle(nroEsq)
+    depositarFlores
+  fin
+  
+  robot tipo4
+  variables
+    nroEsq:numero
+  comenzar
+    nroEsq:=9
+    recorrerAvenida(nroEsq)
+    Pos(10,1)
+    depositarPapeles
+    Pos(15,1)
+    recorrerAvenida(nroEsq)
+    Pos(15,1)
+    depositarPapeles
+    
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4:tipo4
+  
+comenzar
+  AsignarArea(robot1, ca75)
+  AsignarArea(robot1, ca80)
+  AsignarArea(robot2, av75)  
+  AsignarArea(robot2, av80)
+  AsignarArea(robot3, ca10)
+  AsignarArea(robot3, ca15)
+  AsignarArea(robot4, av10)  
+  AsignarArea(robot4, av15)
+  Iniciar(robot1, 1,75)
+  Iniciar(robot2, 75,80) 
+  Iniciar(robot3, 70,10)
+  Iniciar(robot4, 10,1) 
+fin

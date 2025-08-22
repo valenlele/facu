@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej9.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="207"/>
+        <CursorPos X="43" Y="156"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="11">
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="243" Column="23" TopLine="225"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="240" Column="38" TopLine="226"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="290" Column="22" TopLine="270"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="249" Column="54" TopLine="239"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="251" Column="20" TopLine="241"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="290" Column="23" TopLine="272"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="13" Column="46"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="275" Column="69" TopLine="265"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="140" Column="69" TopLine="129"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="148" Column="5" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="175" Column="111" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="ej9.lpr"/>
+        <Caret Line="270" Column="7" TopLine="259"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

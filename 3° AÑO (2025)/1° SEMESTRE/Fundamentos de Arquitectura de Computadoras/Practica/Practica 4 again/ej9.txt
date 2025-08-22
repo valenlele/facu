@@ -1,0 +1,31 @@
+ORG 1000H
+  X DB 3
+  ARREGLO DB ?
+
+ORG 2000H
+  MOV AL, X ; AX = X
+  MOV BX, OFFSET ARREGLO ;puntero a arreglo
+
+  LOOP:
+    ;evaluo si es par o impar
+    MOV CL, AL
+    AND CL, 1 ;en binario, lo que me determina si un numero es par o impar es el ultimo bit
+    JZ ES_PAR
+
+    ES_IMPAR: ;si X es impar, llamo a ES_IMPAR
+      ADD AL, 5
+      JMP SEGUIR
+
+    ES_PAR:
+      SUB AL, 7
+
+    SEGUIR:
+      MOV [BX], AL ;de cualquier manera, guardo en [BX]
+      INC BX
+    
+      ;mientras no sea 0 llamo a LOOP
+      CMP AL, 0
+      JNZ LOOP
+
+HLT
+END

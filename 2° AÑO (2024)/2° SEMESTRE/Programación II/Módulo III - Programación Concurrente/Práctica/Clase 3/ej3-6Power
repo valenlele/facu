@@ -1,0 +1,185 @@
+programa ej6Power
+  
+procesos
+  proceso  contarFlores(ES totFlores:numero)
+  variables
+    floresEsq:numero
+  comenzar
+    floresEsq:=0
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      floresEsq:=floresEsq+1
+    totFlores:=totFlores+floresEsq
+    mientras HayFlorEnLaBolsa
+      depositarFlor    
+  fin
+  
+  proceso recorrerYcontar(E base:numero ; E altura:numero ; ES totFlores:numero)
+  comenzar 
+    repetir 2 
+      repetir altura
+        contarFlores(totFlores)
+        mover
+      derecha
+      repetir base
+        contarFlores(totFlores)
+        mover
+      derecha    
+  fin
+  
+  proceso enviarInicioRobot(E nroRobot:numero; E av:numero; E ca:numero)
+  comenzar
+    si nroRobot=1
+      EnviarMensaje(12,robot1)
+      EnviarMensaje(10,robot1)
+    si nroRobot=2
+      EnviarMensaje(16,robot2)
+      EnviarMensaje(10,robot2)
+    si nroRobot=3
+      EnviarMensaje(20,robot3)
+      EnviarMensaje(10,robot3)
+    si nroRobot=4
+      EnviarMensaje(24,robot4)
+      EnviarMensaje(10,robot4)
+  fin
+  
+  proceso evaluarMax(E aux:numero; E quienSos:numero; ES max:numero; ES maxRobot:numero)
+  comenzar
+    si aux>max
+      max:=aux
+      maxRobot:=quienSos  
+  fin
+  
+areas
+  areaInicial1: AreaP (2,2,2,2)
+  rectangulo1: AreaP(12,10,15,15)
+  areaInicial2: AreaP (6,2,6,2)
+  rectangulo2: AreaP(16,10,19,15)
+  areaInicial3: AreaP (10,2,10,2)
+  rectangulo3: AreaP(20,10,23,15)
+  areaInicial4: AreaP (14,2,14,2)
+  rectangulo4: AreaP(24,10,27,15)
+  areaJefe: AreaP (1,1,1,1)
+  
+robots
+  robot tipo1
+  variables
+    totFlores:numero
+    av:numero
+    ca:numero
+  comenzar 
+    RecibirMensaje(av,robot5)
+    RecibirMensaje(ca,robot5)
+    Pos(av,ca)
+    totFlores:=0 
+    recorrerYcontar(3,5,totFlores)   
+    Informar(totFlores)  
+    EnviarMensaje(totFlores,robot5)
+    EnviarMensaje(1,robot5)
+  fin
+  
+  robot tipo2
+  variables
+    totFlores:numero
+    av:numero
+    ca:numero
+  comenzar 
+    RecibirMensaje(av,robot5)
+    RecibirMensaje(ca,robot5)
+    Pos(av,ca)
+    totFlores:=0 
+    recorrerYcontar(3,5,totFlores)   
+    Informar(totFlores) 
+    EnviarMensaje(totFlores,robot5) 
+    EnviarMensaje(2,robot5)
+  fin
+  
+  robot tipo3
+  variables
+    totFlores:numero
+    av:numero
+    ca:numero
+  comenzar 
+    RecibirMensaje(av,robot5)
+    RecibirMensaje(ca,robot5)
+    Pos(av,ca)
+    totFlores:=0 
+    recorrerYcontar(3,5,totFlores)   
+    Informar(totFlores) 
+    EnviarMensaje(totFlores,robot5) 
+    EnviarMensaje(3,robot5)
+  fin
+  
+  robot tipo4
+  variables
+    totFlores:numero
+    av:numero
+    ca:numero
+  comenzar 
+    RecibirMensaje(av,robot5)
+    RecibirMensaje(ca,robot5)
+    Pos(av,ca)
+    totFlores:=0 
+    recorrerYcontar(3,5,totFlores)   
+    Informar(totFlores)  
+    EnviarMensaje(totFlores,robot5)
+    EnviarMensaje(4,robot5)
+  fin
+  
+  robot tipo5
+  variables
+    aux:numero
+    totFlores:numero
+    max:numero
+    maxRobot:numero
+    quienSos:numero
+  comenzar
+    max:=-1
+    enviarInicioRobot(1,12,10)
+    enviarInicioRobot(2,16,10)
+    enviarInicioRobot(3,20,10)
+    enviarInicioRobot(4,24,10)
+    totFlores:=0
+    RecibirMensaje(aux,*)    
+    RecibirMensaje(quienSos,*)
+    evaluarMax(aux,quienSos,max,maxRobot)
+    totFlores:=totFlores+aux
+    RecibirMensaje(aux,*)
+    RecibirMensaje(quienSos,*)
+    evaluarMax(aux,quienSos,max,maxRobot)
+    totFlores:=totFlores+aux
+    RecibirMensaje(aux,*)
+    RecibirMensaje(quienSos,*)
+    evaluarMax(aux,quienSos,max,maxRobot)
+    totFlores:=totFlores+aux
+    RecibirMensaje(aux,*)
+    RecibirMensaje(quienSos,*)
+    evaluarMax(aux,quienSos,max,maxRobot)
+    totFlores:=totFlores+aux
+    Informar(totFlores)
+    Informar(maxRobot)
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4:tipo4
+  robot5:tipo5
+  
+comenzar
+  AsignarArea(robot1,areaInicial1)
+  AsignarArea(robot1,rectangulo1)
+  AsignarArea(robot2,areaInicial2)
+  AsignarArea(robot2,rectangulo2)
+  AsignarArea(robot3,areaInicial3)
+  AsignarArea(robot3,rectangulo3)
+  AsignarArea(robot4,areaInicial4)
+  AsignarArea(robot4,rectangulo4)
+  AsignarArea(robot5,areaJefe)
+  Iniciar(robot1, 2,2)
+  Iniciar(robot2, 6,2)
+  Iniciar(robot3, 10,2)
+  Iniciar(robot4, 14,2)
+  Iniciar(robot5, 1,1)
+fin

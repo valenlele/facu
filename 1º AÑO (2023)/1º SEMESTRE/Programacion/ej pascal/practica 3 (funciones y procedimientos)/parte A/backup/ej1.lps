@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej2ab"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="30"/>
+        <CursorPos X="39" Y="42"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="19">
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="10" Column="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="24" Column="10" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="3" Column="45"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="10" Column="19" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="11" Column="38" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="10" Column="32" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="11" Column="32"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="6" Column="13"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="8" Column="49"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="34" Column="36" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="13" Column="28" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="15" Column="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="32" Column="7" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="15" Column="8" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="29" Column="5" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="21" Column="7" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="29" Column="10" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="44" Column="38" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Column="13"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1.lpr"/>
+        <Caret Line="41" Column="11" TopLine="30"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

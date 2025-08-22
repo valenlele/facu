@@ -1,0 +1,97 @@
+programa ej4_2Power
+
+procesos
+  proceso tomarYVolver(ES cantPap:numero ; ES hayPapel:boolean)
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    si HayPapelEnLaEsquina
+      tomarPapel
+      cantPap:=cantPap+1
+    sino
+      hayPapel:=~hayPapel
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)  
+  fin  
+  
+areas
+  esqPapeles: AreaP (10,10,10,10)
+  esq1: AreaP (9,9,9,9)
+  esq2: AreaP (11,9,11,9)
+  esq3: AreaP (9,11,9,11)
+  esq4: AreaP (11,11,11,11)
+  
+robots
+  robot tipo1
+  variables
+    cantPap:numero
+    hayPapel:boolean
+  comenzar
+    cantPap:=0
+    hayPapel:=~HayPapelEnLaEsquina
+    mientras hayPapel
+      tomarYVolver(cantPap,hayPapel)
+    Informar(cantPap)
+  fin
+  
+  robot tipo2
+  variables
+    cantPap:numero
+    hayPapel:boolean
+  comenzar
+    cantPap:=0
+    hayPapel:=~HayPapelEnLaEsquina
+    mientras hayPapel
+      tomarYVolver(cantPap,hayPapel)
+    Informar(cantPap)
+  fin
+  
+  robot tipo3
+  variables
+    cantPap:numero
+    hayPapel:boolean
+  comenzar
+    cantPap:=0
+    hayPapel:=~HayPapelEnLaEsquina
+    mientras hayPapel
+      tomarYVolver(cantPap,hayPapel)
+    Informar(cantPap)
+  fin
+  
+  robot tipo4
+  variables
+    cantPap:numero
+    hayPapel:boolean
+  comenzar
+    cantPap:=0
+    hayPapel:=~HayPapelEnLaEsquina
+    mientras hayPapel
+      tomarYVolver(cantPap,hayPapel)
+    Informar(cantPap)
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4:tipo4
+  
+comenzar
+  AsignarArea(robot1, esq1)
+  AsignarArea(robot1, esqPapeles)
+  AsignarArea(robot2, esq2)
+  AsignarArea(robot2, esqPapeles)
+  AsignarArea(robot3, esq3)
+  AsignarArea(robot3, esqPapeles)
+  AsignarArea(robot4, esq4)
+  AsignarArea(robot4, esqPapeles)
+  Iniciar(robot1, 9,9)
+  Iniciar(robot2, 11,9)
+  Iniciar(robot3, 9,11)
+  Iniciar(robot4, 11,11)
+fin

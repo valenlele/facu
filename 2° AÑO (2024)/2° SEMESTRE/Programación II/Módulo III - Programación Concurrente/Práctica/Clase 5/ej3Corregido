@@ -1,0 +1,121 @@
+programa ej3Clase5
+
+procesos
+  
+  proceso enviarIDs
+  comenzar
+    EnviarMensaje(1,robCliente1)
+    EnviarMensaje(2,robCliente2)
+    EnviarMensaje(3,robCliente3)
+  fin
+
+areas
+  esqServidor: AreaP (100,100,100,100)
+  av1: AreaPC (1,1,1,100)
+  av2: AreaPC (2,1,2,100)
+  av3: AreaPC (3,1,3,100)
+  
+robots
+
+  robot tipoCliente
+  variables
+    id:numero
+    cantF:numero
+    avAct,caAct:numero
+    ack:numero
+  comenzar
+    RecibirMensaje(id,robServidor)
+    mientras (PosCa<>100)
+      avAct:=PosAv
+      caAct:=PosCa
+      Random(cantF,1,4) {calcular random flores}
+      EnviarMensaje(id,robServidor) {enviar id al servidor}    
+      EnviarMensaje(cantF,robServidor) {enviar cantidad de flores random calculadas}
+      EnviarMensaje(avAct,robServidor) 
+      EnviarMensaje(caAct+1,robServidor) {enviar mi avenida y calle}
+      RecibirMensaje(ack,robServidor) {esperar actualizacion del servior de que dejo las flores}
+      Pos(avAct,caAct+1)
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+      Pos(avAct,caAct)
+      mientras (PosCa<>100) & (cantF>0)
+        depositarFlor
+        cantF:=cantF-1
+        mover
+      si (PosCa=100)
+        EnviarMensaje(id,robServidor)
+        EnviarMensaje(0,robServidor)
+  fin
+
+  robot tipoServidor
+  variables
+    termine1,termine2,termine3:numero
+    id:numero
+    cantF:numero
+    av,ca:numero 
+  comenzar  
+    termine1:=0
+    termine2:=0
+    termine3:=0
+    enviarIDs {enviar id a clientes}
+    mientras (termine1<>1) & (termine2<>1) & (termine3<>1)  
+      RecibirMensaje(id,*) {recibir id de un cliente}
+      si id=1
+        RecibirMensaje(cantF,robCliente1)
+        si cantF<>0
+          RecibirMensaje(av,robCliente1)
+          RecibirMensaje(ca,robCliente1)
+          Pos(av,ca)
+          repetir cantF
+            depositarFlor
+          Pos(100,100)
+          EnviarMensaje(1,robCliente1)
+        sino
+          termine1:=1  
+      sino
+        si id=2
+          RecibirMensaje(cantF,robCliente2)
+          si cantF<>0
+            RecibirMensaje(av,robCliente2)
+            RecibirMensaje(ca,robCliente2)
+            Pos(av,ca)
+            repetir cantF
+              depositarFlor
+            Pos(100,100)
+            EnviarMensaje(1,robCliente2)
+          sino
+            termine2:=1 
+        sino
+          si id=3
+            RecibirMensaje(cantF,robCliente3) 
+            si cantF<>0
+              RecibirMensaje(av,robCliente3)
+              RecibirMensaje(ca,robCliente3)
+              Pos(av,ca)
+              repetir cantF
+                depositarFlor
+              Pos(100,100)
+              EnviarMensaje(1,robCliente3)
+            sino
+              termine3:=1 
+  fin
+  
+variables
+  robServidor: tipoServidor
+  robCliente1: tipoCliente
+  robCliente2: tipoCliente
+  robCliente3: tipoCliente
+  
+comenzar
+  AsignarArea(robServidor, esqServidor)
+  AsignarArea(robServidor, av1)
+  AsignarArea(robServidor, av2)
+  AsignarArea(robServidor, av3)
+  AsignarArea(robCliente1, av1)
+  AsignarArea(robCliente2, av2)
+  AsignarArea(robCliente3, av3)
+  Iniciar(robServidor, 100,100)
+  Iniciar(robCliente1, 1,1)
+  Iniciar(robCliente2, 2,1)  
+  Iniciar(robCliente3, 3,1)
+fin

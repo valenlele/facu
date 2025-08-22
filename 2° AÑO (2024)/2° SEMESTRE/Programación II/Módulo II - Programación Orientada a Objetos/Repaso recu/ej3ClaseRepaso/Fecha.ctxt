@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Fecha
+comment1.params=ciudad\ dia
+comment1.target=Fecha(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=Fecha()
+comment3.params=
+comment3.target=java.lang.String\ getCiudad()
+comment4.params=
+comment4.target=java.lang.String\ getDia()
+comment5.params=ciudad
+comment5.target=void\ setCiudad(java.lang.String)
+comment6.params=dia
+comment6.target=void\ setDia(java.lang.String)
+numComments=7

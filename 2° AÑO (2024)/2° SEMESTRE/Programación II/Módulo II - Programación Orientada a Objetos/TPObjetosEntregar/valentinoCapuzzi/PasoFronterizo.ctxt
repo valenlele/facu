@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PasoFronterizo
+comment1.params=
+comment1.target=PasoFronterizo()
+comment2.params=v
+comment2.target=void\ agregarVisita(Visita)
+comment3.params=
+comment3.target=double\ porc20000()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

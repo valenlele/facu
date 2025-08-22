@@ -1,0 +1,97 @@
+programa ej1bClase5
+
+procesos
+
+  proceso tomarFlores
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor 
+  fin
+  
+  proceso recorrerYTomar(E alto:numero ; E ancho:numero)
+  comenzar
+    repetir 2
+      repetir alto
+        tomarFlores
+        mover
+      derecha
+      repetir ancho
+        tomarFlores  
+        mover
+      derecha
+  fin
+  
+  proceso depositarEnEsq
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)  
+  fin
+  
+  proceso enviarEsqIzqInfPerimetro
+  comenzar
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(40,robot2)
+  fin
+  
+  proceso enviarAnchoAltoPerimetro
+  comenzar
+    EnviarMensaje(20,robot1)
+    EnviarMensaje(15,robot1)
+    EnviarMensaje(20,robot2)
+    EnviarMensaje(15,robot2)
+  fin
+  
+areas
+  p1: AreaP (15,15,30,35)
+  p2: AreaP (40,40,55,60)
+  esq10: AreaC (10,10,10,10)
+  iR1: AreaP(2,2,2,2)
+  iR2: AreaP (6,6,6,6)
+  iJefe: AreaP (1,1,1,1)
+  
+robots
+  robot tipoR
+  variables
+    esq:numero
+    alto,ancho:numero
+  comenzar 
+    RecibirMensaje(esq,robotJ) {recibe esq inferior izq del perimetro a recorrer}
+    Pos(esq,esq)
+    RecibirMensaje(alto,robotJ)
+    RecibirMensaje(ancho,robotJ)  {recibe alto y ancho del perimetro a recorrer}
+    recorrerYTomar(alto,ancho)
+    depositarEnEsq
+  fin
+  
+  robot tipoJ
+  comenzar
+    enviarEsqIzqInfPerimetro
+    enviarAnchoAltoPerimetro
+  fin
+  
+variables
+  robot1:tipoR
+  robot2:tipoR
+  robotJ:tipoJ
+  
+comenzar
+  AsignarArea(robot1, p1)
+  AsignarArea(robot1,esq10)
+  AsignarArea(robot1,iR1)
+  AsignarArea(robot2, p2)
+  AsignarArea(robot2,esq10)
+  AsignarArea(robot2,iR2)
+  AsignarArea(robotJ,iJefe)
+  Iniciar(robot1, 2,2)
+  Iniciar(robot2, 6,6)
+  Iniciar(robotJ, 1,1)
+fin

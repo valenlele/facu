@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej2abc.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej3"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="16"/>
+        <CursorPos X="9" Y="28"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\objpas.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="8" Y="35"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="6">
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="25" Column="53" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="39" Column="59" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="19" Column="27" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="28" Column="14" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="25" Column="12" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="28" Column="13" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="ej2abc.lpr"/>
+        <Caret Line="40" Column="26" TopLine="27"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

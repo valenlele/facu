@@ -1,0 +1,65 @@
+15)
+
+ORG 1000H
+  UNO_H DW 0011111110000000B
+  UNO_L DW 0000000000000000B
+
+  SN_H DW 0
+  SN_L DW 1
+
+ORG 3000H
+  VERIF_IEEE_754:
+    MOV DX, AX ;muevo la parte alta a DX temporalmente para analizar el exponente
+
+    AND DX, 0111111110000000B ;verifico si el exponente en 0
+    JZ E_CERO
+
+    MOV DX, AX ;vuelvo a mover la parte alta a DX
+    XOR DX, 0111111110000000B ;verifico si el exponente es 255 (todos 1's)
+    JZ E_UNOS
+    MOV CL, 4 ;como el exponente no es 0 ni 255, el numero esta normalizado
+    RET
+
+    E_CERO:
+      MOV DX, AX
+      AND DX, 0000000001111111B
+      JNZ NUM_DEN
+      MOV DX, BX
+      AND DX, 1111111111111111B
+      JNZ NUM_DEN
+
+      MOV CL, 3 ;si la mantisa no es no cero, es cero
+      
+      RET
+
+    E_UNOS:
+      MOV DX, AX
+      AND DX, 0000000001111111B
+      JNZ N_A_N
+      MOV DX, BX
+      AND DX, 1111111111111111B
+      JNZ N_A_N
+
+      MOV CL, 1 ;si la mantisa no es no cero, es infinito
+      
+      RET
+
+    NUM_DEN:   
+      MOV CL, 0 ;exponente 0 y mantisa no cero, numero denormalizado
+      RET
+
+    N_A_N:
+      MOV CL, 2 
+      RET
+
+ORG 2000H
+  MOV AX, UNO_H
+  MOV BX, UNO_L
+
+  ;MOV AX, SN_H
+  ;MOV BX, SN_L
+
+  CALL VERIF_IEEE_754
+
+HLT
+END

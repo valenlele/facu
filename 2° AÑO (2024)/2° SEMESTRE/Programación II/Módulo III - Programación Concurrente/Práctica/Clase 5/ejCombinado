@@ -1,0 +1,189 @@
+programa ejCombinado
+
+procesos
+  proceso enviarQuienesSon
+  comenzar
+    EnviarMensaje(1,robotEj1)
+    EnviarMensaje(2,robotEj2)
+    EnviarMensaje(3,robotEj3)
+    EnviarMensaje(4,robotEj4)
+  fin
+
+  proceso enviarAvenidas
+  variables
+    av:numero
+    quienSos:numero
+  comenzar
+    av:=97
+    repetir 4
+      RecibirMensaje(quienSos,*)
+      si quienSos=1
+        EnviarMensaje(av,robotEj1)
+      sino 
+        si quienSos=2
+          EnviarMensaje(av,robotEj2)
+        sino 
+          si quienSos=3
+            EnviarMensaje(av,robotEj3)
+          sino 
+            si quienSos=4
+              EnviarMensaje(av,robotEj4)
+      av:=av+1
+  fin
+  
+  proceso posicionarseYRecorrer(ES cantF:numero ; E av:numero)
+  comenzar
+    Pos(av,1)
+    repetir 99
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+        cantF:=cantF+1
+      mover
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantF:=cantF+1
+  fin
+
+  proceso calcularMaximos(ES max1:numero ; ES max1R:numero ; ES max2:numero ; ES max2R:numero; E quienSos:numero)
+  variables
+    cantF:numero
+  comenzar
+    si cantF>max1
+      max2:=max1
+      max2R:=max1R
+      max1:=cantF
+      max1R:=quienSos
+    sino
+      si cantF>max2
+        max2:=cantF
+        max2R:=quienSos  
+  fin
+  
+  proceso enviarGanadores(E max1R:numero ; E max2R:numero)
+  comenzar
+    EnviarMensaje(max1R,robotEj1)
+    EnviarMensaje(max2R,robotEj1)
+    EnviarMensaje(max1R,robotEj2)
+    EnviarMensaje(max2R,robotEj2)
+    EnviarMensaje(max1R,robotEj3)
+    EnviarMensaje(max2R,robotEj3)
+    EnviarMensaje(max1R,robotEj4)
+    EnviarMensaje(max2R,robotEj4)
+  fin
+  
+  proceso carrera(E quienSos:numero)
+  comenzar
+    si quienSos=1
+      Pos(50,1)
+    sino
+      Pos(60,1)
+    repetir 99
+      mover
+  fin
+
+areas
+  ult4Av: AreaPC (97,1,100,100)
+  av50: AreaP (50,1,50,100)
+  av60: AreaP (60,1,60,100)
+  iAdmin: AreaP (1,1,1,1)
+  iEj1: AreaP (1,2,1,2)
+  iEj2: AreaP (1,3,1,3)
+  iEj3: AreaP (1,4,1,4)
+  iEj4: AreaP (1,5,1,5)
+  
+robots
+  robot tipoAdmin
+  variables
+    max1:numero
+    max1R:numero
+    max2:numero
+    max2R:numero
+    totF:numero
+    quienSos:numero
+    cantF:numero
+  comenzar
+    totF:=0
+    max1:=-1
+    max2:=-1
+    enviarQuienesSon  {enviar quienes son a robots}
+    enviarAvenidas
+    repetir 4                     {recepcion flores}
+      RecibirMensaje(quienSos,*)     {recibo numero de robot}
+      si quienSos=1                  {dependiendo del robot recibo sus flores}
+        RecibirMensaje(cantF,robotEj1)
+      sino
+        si quienSos=2
+          RecibirMensaje(cantF,robotEj2)
+        sino
+          si quienSos=3
+            RecibirMensaje(cantF,robotEj3)
+          sino
+            si quienSos=4
+              RecibirMensaje(cantF,robotEj4)      
+      totF:=totF+cantF
+      calcularMaximos(max1,max1R,max2,max2R,quienSos)
+    Informar(totF)  
+    Informar('Los dos ganadores son: ',max1R,max2R)
+    enviarGanadores(max1R,max2R)
+    RecibirMensaje(quienSos,*)
+    Informar('El supercampeon es: ',quienSos)
+  fin
+                        
+  robot tipoEj
+  variables
+    quienSoy:numero
+    cantF:numero
+    av:numero
+    ganador1:numero
+    ganador2:numero
+  comenzar
+    cantF:=0
+    RecibirMensaje(quienSoy,robotAdmin)  {recibir quien soy}
+    EnviarMensaje(quienSoy,robotAdmin)   {solicitar avenida}
+    RecibirMensaje(av,robotAdmin)        {recibir avenida}
+    posicionarseYRecorrer(cantF,av)      {recorrer avenid y tomar flores}
+    EnviarMensaje(quienSoy,robotAdmin)   {enviar quien soy al admin}
+    EnviarMensaje(cantF,robotAdmin)      {enviar mi cant de flores al admin}
+    RecibirMensaje(ganador1,robotAdmin)  {recibir ganadores}
+    RecibirMensaje(ganador2,robotAdmin)
+    si ganador1=quienSoy
+      carrera(1)
+      EnviarMensaje(quienSoy,robotAdmin)
+    sino
+      si ganador2=quienSoy
+        carrera(2)
+        EnviarMensaje(quienSoy,robotAdmin)
+    Pos(1,quienSoy+1)
+  fin
+  
+variables
+  robotAdmin:tipoAdmin
+  robotEj1:tipoEj
+  robotEj2:tipoEj
+  robotEj3:tipoEj
+  robotEj4:tipoEj
+  
+comenzar
+  AsignarArea(robotAdmin,iAdmin)
+  AsignarArea(robotEj1,av50)
+  AsignarArea(robotEj1,av60)
+  AsignarArea(robotEj1,iEj1)
+  AsignarArea(robotEj1,ult4Av)
+  AsignarArea(robotEj2,av50)
+  AsignarArea(robotEj2,av60)
+  AsignarArea(robotEj2,iEj2)
+  AsignarArea(robotEj2,ult4Av)
+  AsignarArea(robotEj3,av50)
+  AsignarArea(robotEj3,av60)
+  AsignarArea(robotEj3,iEj3)
+  AsignarArea(robotEj3,ult4Av)
+  AsignarArea(robotEj4,av50)
+  AsignarArea(robotEj4,av60)
+  AsignarArea(robotEj4,iEj4)
+  AsignarArea(robotEj4,ult4Av)
+  Iniciar(robotAdmin, 1,1)
+  Iniciar(robotEj1, 1,2)
+  Iniciar(robotEj2, 1,3)
+  Iniciar(robotEj3, 1,4)
+  Iniciar(robotEj4, 1,5)
+fin

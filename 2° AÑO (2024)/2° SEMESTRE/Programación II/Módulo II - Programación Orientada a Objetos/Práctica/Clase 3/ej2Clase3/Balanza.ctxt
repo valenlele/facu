@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Balanza
+comment1.params=
+comment1.target=int\ getMonto()
+comment2.params=
+comment2.target=int\ getCantItems()
+comment3.params=unMonto
+comment3.target=void\ setMonto(int)
+comment4.params=unCantItems
+comment4.target=void\ setCantItems(int)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

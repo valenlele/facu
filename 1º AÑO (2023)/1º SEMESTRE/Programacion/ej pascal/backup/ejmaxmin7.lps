@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ejmaxmin7.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="maxmin8"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="5"/>
+        <CursorPos X="18" Y="12"/>
+        <UsageCount Value="59"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="ejmaxmin7.lpr"/>
+        <Caret Line="30" Column="36" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin7.lpr"/>
+        <Caret Line="27" Column="56" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="ejmaxmin7.lpr"/>
+        <Caret Line="5" Column="9"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

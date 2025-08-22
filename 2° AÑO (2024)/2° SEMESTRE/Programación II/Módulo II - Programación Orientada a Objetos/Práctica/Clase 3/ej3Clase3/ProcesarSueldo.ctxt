@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ProcesarSueldo
+comment1.params=sueldoB\ cantCamp
+comment1.target=int\ calcularSueldoACobrar(int,\ int)
+numComments=2

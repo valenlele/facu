@@ -1,0 +1,43 @@
+13)
+
+ORG 1000H
+  VECTOR1 DW 1234H, 5678H ;primer numero: 56781234H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+
+  VECTOR2 DW 1234H, 5678H ;primer numero: 56781234H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+          DW 1111H, 2222H
+
+  VECTOR_RES DW ?, ?
+             DW ?, ?
+             DW ?, ?
+             DW ?, ?
+             DW ?, ?
+             DW ?, ?
+
+  CONT DW 6
+
+ORG 3000H
+  SUMA_VECTORES:
+    
+    RET
+
+ORG 2000H
+  MOV AX, CONT
+  MOV BX, OFFSET VECTOR1
+  MOV CX, OFFSET VECTOR2
+  MOV DX, OFFSET VECTOR_RES
+  RECORRER:
+    CALL SUMA_VECTORES
+    DEC AX
+    JNZ RECORRER
+
+HLT
+END

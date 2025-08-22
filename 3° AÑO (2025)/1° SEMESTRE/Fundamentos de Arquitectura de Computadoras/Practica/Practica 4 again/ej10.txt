@@ -1,0 +1,28 @@
+ORG 1000H
+  STRING DB "Organizacion y la Computacion" ;ASCII  a = 61h -- ASCII C = 63h
+  FIN DB ?
+
+ORG 2000H
+  MOV CL, OFFSET FIN - OFFSET STRING ;longitud de la frase
+  MOV BX, OFFSET STRING ;puntero a la frase
+  MOV AL, 0 ;contador
+
+  LOOP: ;recorro string
+    MOV DL, [BX] ;tomo caracter
+
+    CMP DL, 61H
+    JNZ SEGUIR
+
+    MOV DL, [BX+1]
+    CMP DL, 63H
+    JNZ SEGUIR
+    INC AL
+    
+    ;de cualquier manera
+    SEGUIR:
+      INC BX ;aumento el puntero
+      DEC CL ;decremento CL
+      JNZ LOOP ;si este no es 0 voy a LOOP
+
+HLT
+END

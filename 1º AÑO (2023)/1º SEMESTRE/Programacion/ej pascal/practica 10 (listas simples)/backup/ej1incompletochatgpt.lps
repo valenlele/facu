@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="77"/>
+        <CursorPos X="26" Y="84"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="11">
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="12" Column="43"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="41" Column="31" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="61" Column="25" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="46" Column="22" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="74" Column="16" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="85" Column="20" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="93" Column="14" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="68" Column="39" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="57" Column="44" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="65" Column="31" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="91" Column="217" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="ej1incompletochatgpt.lpr"/>
+        <Caret Line="44" Column="15" TopLine="37"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

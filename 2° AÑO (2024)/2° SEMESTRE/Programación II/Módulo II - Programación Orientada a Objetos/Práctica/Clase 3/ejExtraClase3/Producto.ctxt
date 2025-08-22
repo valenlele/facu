@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Producto
+comment1.params=
+comment1.target=int\ getCod()
+comment10.params=unaUn
+comment10.target=void\ setUnidades(int)
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=
+comment3.target=java.lang.String\ getDesc()
+comment4.params=
+comment4.target=java.lang.String\ getMarca()
+comment5.params=
+comment5.target=int\ getUn()
+comment6.params=unCod
+comment6.target=void\ setCod(int)
+comment7.params=unNombre
+comment7.target=void\ setNombre(java.lang.String)
+comment8.params=unaDesc
+comment8.target=void\ setDesc(java.lang.String)
+comment9.params=unaMarca
+comment9.target=void\ setMarca(java.lang.String)
+numComments=12

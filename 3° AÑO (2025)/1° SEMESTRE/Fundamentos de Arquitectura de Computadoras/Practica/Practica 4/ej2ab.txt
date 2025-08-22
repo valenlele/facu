@@ -1,0 +1,34 @@
+2) a)
+
+ORG 1000H
+
+NUMO DB 80h
+NUM1 DB 200
+NUM2 DB -1
+BYTEO DB 01111111B
+BYTE1 DB 10101010B
+
+
+ORG 2000H
+
+MOV AL, NUMO
+ADD AL, AL ; flag de carry en 1 debido a que el resultado no se puede representar con 1 byte (el resultado no es correcto si interpretas a los numeros sin signo). flag de overflow en 1 porque se suman dos negativos y da un positivo (el resultado no es correcto si interpretas a los numeros con signo). flag de zero en 1 porque el resultado da 0
+INC NUM1
+MOV BH, NUM1
+MOV BL, BH
+DEC BL
+SUB BL, BH ; flag de signo en 1 debido a que el bit mas significativo del resultado es 1. flag de carry en 1 debido al desbordamiento de la resta (el resultado es negativo para interpretacion de numero sin signo).
+MOV CH, BYTE1
+AND CH, BYTEO
+NOT BYTEO
+OR CH, BYTEO
+XOR CH, 11111111B
+HLT
+END
+
+b) NUM1 : 11001000
+   NUM2 : 11111111
+Se encuentran expresados en Ca2.
+
+
+

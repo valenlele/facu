@@ -1,0 +1,122 @@
+programa ej2Clase4
+
+procesos
+  
+  proceso hacerIntentos(E cantIntentos:numero ; E rangoInfBaseArea:numero ; E rangoSupBaseArea:numero ; E rangoInfAlturaArea:numero ; E rangoSupAlturaArea:numero)
+  variables
+    avI:numero
+    caI:numero
+    av:numero
+    ca:numero  
+  comenzar
+    avI:=PosAv
+    caI:=PosCa
+    repetir cantIntentos
+      Random(av,rangoInfBaseArea,rangoSupBaseArea)
+      Random(ca,rangoInfAlturaArea,rangoSupAlturaArea)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)  
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+      Pos(avI,caI)
+      LiberarEsquina(av,ca)
+  fin
+  
+areas
+  areaF: AreaC (1,1,5,10)
+  areaP: AreaC (6,1,10,9)
+  esqF1: AreaP (6,10,6,10)
+  esqF2: AreaP (7,10,7,10)
+  esqP1: AreaP (8,10,8,10)
+  esqP2: AreaP (9,10,9,10)
+  esqDep: AreaP (10,10,10,10)
+  
+robots
+  robot tipoF1
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    hacerIntentos(5,1,5,5,10)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)
+  fin
+  
+  robot tipoF2
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    hacerIntentos(5,1,5,5,10)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)
+  fin
+  
+  robot tipoP1
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    hacerIntentos(3,6,10,1,9)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)
+  fin
+  
+  robot tipoP2
+  variables
+    avAct:numero
+    caAct:numero
+  comenzar
+    avAct:=PosAv
+    caAct:=PosCa
+    hacerIntentos(3,6,10,1,9)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+    Pos(avAct,caAct)
+    LiberarEsquina(10,10)
+  fin
+  
+variables
+  robotF1:tipoF1
+  robotF2:tipoF2
+  robotP1:tipoP1
+  robotP2:tipoP2
+  
+comenzar
+  AsignarArea(robotF1, areaF)
+  AsignarArea(robotF1, esqF1)
+  AsignarArea(robotF1, esqDep)
+  AsignarArea(robotF2, areaF)
+  AsignarArea(robotF2, esqF2)
+  AsignarArea(robotF2, esqDep)
+  AsignarArea(robotP1, areaP)
+  AsignarArea(robotP1, esqP1)
+  AsignarArea(robotP1, esqDep)
+  AsignarArea(robotP2, areaP)
+  AsignarArea(robotP2, esqP2)
+  AsignarArea(robotP2, esqDep)
+  Iniciar(robotF1, 6,10)
+  Iniciar(robotF2, 7,10)
+  Iniciar(robotP1, 8,10)
+  Iniciar(robotP2, 9,10)
+fin

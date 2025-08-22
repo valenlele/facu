@@ -1,0 +1,285 @@
+programa ej4Clase3
+
+procesos  
+  proceso enviarMensajeRobot(E nroRobot:numero ; E t:numero)
+  variables
+    paso:numero
+  comenzar
+    si nroRobot=1
+      paso:=1
+      EnviarMensaje(t,robot1)
+      EnviarMensaje(paso,robot1)
+    sino
+      si nroRobot=2
+        paso:=2
+        EnviarMensaje(t,robot2)
+        EnviarMensaje(paso,robot2)
+      sino
+        si nroRobot=3
+          paso:=3
+          EnviarMensaje(t,robot3)
+          EnviarMensaje(paso,robot3)
+        sino
+          si nroRobot=4
+            paso:=4
+            EnviarMensaje(t,robot4)
+            EnviarMensaje(paso,robot4)
+  fin
+  
+  proceso posicionarseEsquina
+  variables
+    av:numero
+    ca:numero
+  comenzar
+    Random(av,5,50)
+    Random(ca,5,30)
+    Pos(av,ca)  
+  fin
+  
+  proceso tomarFloresYPapeles(ES cantFlores:numero ; ES cantPapeles:numero)
+  comenzar
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+      cantPapeles:=cantPapeles+1
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantFlores:=cantFlores+1
+  fin
+  
+  proceso recibirFloresPapeles(E nroRobot:numero ; ES cantFlores:numero ; ES cantPapeles:numero)
+  variables
+    flores:numero
+    papeles:numero
+  comenzar
+    si nroRobot=1
+      RecibirMensaje(flores,robot1)
+      RecibirMensaje(papeles,robot1)
+      cantFlores:=cantFlores+flores
+      cantPapeles:=cantPapeles+papeles
+    sino
+      si nroRobot=2
+        RecibirMensaje(cantFlores,robot2)
+        RecibirMensaje(cantPapeles,robot2)
+        cantFlores:=cantFlores+flores
+        cantPapeles:=cantPapeles+papeles
+      sino
+        si nroRobot=3
+          RecibirMensaje(cantFlores,robot3)
+          RecibirMensaje(cantPapeles,robot3)
+          cantFlores:=cantFlores+flores
+          cantPapeles:=cantPapeles+papeles
+        sino
+          si nroRobot=4
+            RecibirMensaje(cantFlores,robot4)
+            RecibirMensaje(cantPapeles,robot4) 
+            cantFlores:=cantFlores+flores
+            cantPapeles:=cantPapeles+papeles 
+  fin
+  
+  proceso contarElem(ES cantElem1:numero ; ES cantElem2:numero ; ES cantElem3:numero ; ES cantElem4:numero ; E   cantFlores:numero ; E cantPapeles:numero ; E nroRobot:numero)
+  comenzar
+    si nroRobot=1
+      cantElem1:=cantElem1+cantFlores+cantPapeles
+    sino
+      si nroRobot=2
+        cantElem2:=cantElem2+cantFlores+cantPapeles
+      sino
+        si nroRobot=3
+          cantElem3:=cantElem3+cantFlores+cantPapeles
+        sino
+          si nroRobot=4
+            cantElem4:=cantElem2+cantFlores+cantPapeles 
+  fin
+ 
+  proceso verifMaximo(E cantElem1:numero ; E cantElem2:numero ; E cantElem3:numero ; E cantElem4:numero; ES maxElemR:numero)
+  comenzar
+    si cantElem1>=cantElem2
+      si cantElem1>=cantElem3
+        si cantElem1>=cantElem4
+          maxElemR:=1
+        sino
+          maxElemR:=4
+      sino
+        si cantElem3>cantElem4
+          maxElemR:=3
+    sino
+      si cantElem2>=cantElem3
+        si cantElem2>=cantElem4
+          maxElemR:=2
+        sino
+          maxElemR:=4
+      sino
+        si cantElem3>=cantElem4
+          maxElemR:=3
+        sino
+          maxElemR:=4
+  fin
+  
+  proceso terminarTurnos
+  variables
+    t:numero
+  comenzar
+    t:=1
+    EnviarMensaje(t,robot1)
+    EnviarMensaje(t,robot2)
+    EnviarMensaje(t,robot3)
+    EnviarMensaje(t,robot4)
+  fin
+ 
+areas
+  areaC: AreaP(1,1,1,1)
+  inicio1: AreaP(7,4,7,4)
+  inicio2: AreaP(9,4,9,4)
+  inicio3: AreaP(11,4,11,4)
+  inicio4: AreaP(13,4,13,4)
+  rectangulo: AreaPC(5,5,50,30)
+  
+robots
+  robot tipo1
+  variables
+    paso:boolean
+    cantFlores:numero
+    cantPapeles:numero
+    terminar:boolean
+    t:numero
+  comenzar
+    RecibirMensaje(t,robotC)
+    terminar:=t=1
+    mientras ~terminar
+      RecibirMensaje(paso,robotC)
+      si paso=1
+        cantFlores:=0
+        cantPapeles:=0
+        posicionarseEsquina
+        tomarFloresYPapeles(cantFlores,cantPapeles)
+        EnviarMensaje(cantFlores,robotC)
+        EnviarMensaje(cantPapeles,robotC)
+        Pos(7,4)
+      RecibirMensaje(t,robotC)
+      terminar:=t=1
+  fin
+  
+  robot tipo2
+  variables
+    paso:boolean
+    cantFlores:numero
+    cantPapeles:numero
+    terminar:boolean
+    t:numero
+  comenzar
+    RecibirMensaje(t,robotC)
+    terminar:=t=1
+    mientras ~terminar
+      RecibirMensaje(paso,robotC)
+      si paso=2
+        cantFlores:=0
+        cantPapeles:=0
+        posicionarseEsquina
+        tomarFloresYPapeles(cantFlores,cantPapeles)
+        EnviarMensaje(cantFlores,robotC)
+        EnviarMensaje(cantPapeles,robotC)
+        Pos(9,4)
+      RecibirMensaje(t,robotC)
+      terminar:=t=1
+  fin
+  
+  robot tipo3
+  variables
+    paso:boolean
+    cantFlores:numero
+    cantPapeles:numero
+    terminar:boolean
+    t:numero
+  comenzar
+    RecibirMensaje(t,robotC)
+    terminar:=t=1
+    mientras ~terminar
+      RecibirMensaje(paso,robotC)
+      si paso=3
+        cantFlores:=0
+        cantPapeles:=0
+        posicionarseEsquina
+        tomarFloresYPapeles(cantFlores,cantPapeles)
+        EnviarMensaje(cantFlores,robotC)
+        EnviarMensaje(cantPapeles,robotC)
+        Pos(11,4)
+      RecibirMensaje(t,robotC)
+      terminar:=t=1
+  fin
+  
+  robot tipo4
+  variables
+    paso:boolean
+    cantFlores:numero
+    cantPapeles:numero
+    terminar:boolean
+    t:numero
+  comenzar
+    RecibirMensaje(t,robotC)
+    terminar:=t=1
+    mientras ~terminar
+      RecibirMensaje(paso,robotC)
+      si paso=4
+        cantFlores:=0
+        cantPapeles:=0
+        posicionarseEsquina
+        tomarFloresYPapeles(cantFlores,cantPapeles)
+        EnviarMensaje(cantFlores,robotC)
+        EnviarMensaje(cantPapeles,robotC)
+        Pos(13,4)
+      RecibirMensaje(t,robotC)
+      terminar:=t=1
+  fin
+  
+  robot tipoC
+  variables
+    nroRobot:numero  
+    cantFlores:numero
+    cantPapeles:numero
+    cantElem1:numero
+    cantElem2:numero
+    cantElem3:numero
+    cantElem4:numero
+    maxElemR:numero
+    t:numero
+  comenzar
+    cantElem1:=0
+    cantElem2:=0
+    cantElem3:=0
+    cantElem4:=0
+    repetir 20
+      cantFlores:=0
+      cantPapeles:=0
+      Random(nroRobot,1,4)
+      t:=0
+      enviarMensajeRobot(nroRobot,t)     
+      recibirFloresPapeles(nroRobot,cantFlores,cantPapeles)
+      contarElem(cantElem1,cantElem2,cantElem3,cantElem4,cantFlores,cantPapeles,nroRobot) 
+    terminarTurnos
+    verifMaximo(cantElem1,cantElem2,cantElem3,cantElem4,maxElemR) 
+    Informar(maxElemR) 
+  fin
+  
+variables
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4:tipo4
+  robotC:tipoC
+  
+comenzar
+  AsignarArea(robot1, rectangulo)
+  AsignarArea(robot1, inicio1)
+  AsignarArea(robot2, rectangulo)
+  AsignarArea(robot2, inicio2)
+  AsignarArea(robot3, rectangulo)
+  AsignarArea(robot3, inicio3)
+  AsignarArea(robot4, rectangulo)
+  AsignarArea(robot4, inicio4)
+  AsignarArea(robotC, areaC)
+  Iniciar(robot1, 7,4)
+  Iniciar(robot2, 9,4)
+  Iniciar(robot3, 11,4)
+  Iniciar(robot4, 13,4)
+  Iniciar(robotC, 1,1)
+fin

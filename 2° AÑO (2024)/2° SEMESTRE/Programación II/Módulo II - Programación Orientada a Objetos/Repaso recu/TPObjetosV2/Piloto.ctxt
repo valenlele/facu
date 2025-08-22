@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Piloto
+comment1.params=nom\ ap\ rank
+comment1.target=Piloto(java.lang.String,\ java.lang.String,\ int)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=Piloto()
+comment3.params=
+comment3.target=java.lang.String\ getNom()
+comment4.params=
+comment4.target=java.lang.String\ getAp()
+comment5.params=
+comment5.target=int\ getRank()
+comment6.params=nom
+comment6.target=void\ setNom(java.lang.String)
+comment7.params=ap
+comment7.target=void\ setAp(java.lang.String)
+comment8.params=rank
+comment8.target=void\ setRank(int)
+comment9.params=pos
+comment9.target=double\ sumarPuntos(int)
+numComments=11

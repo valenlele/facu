@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1750956454 source:d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ejbibliotecashora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"horario.h"
+
+1750956176 d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ejbibliotecashora\horario.h
+
+1750958822 source:d:\valentino\facu\3∞ a—o (2025)\1∞ semestre\taller de lenguajes i\practica\clase 6\ejbibliotecashora\horario.c
+	<stdio.h>
+	"horario.h"
+

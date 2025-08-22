@@ -1,0 +1,198 @@
+programa ej3Clase4
+
+procesos
+  
+  proceso enviarEsqRobots(E av:numero ; E ca:numero)
+  comenzar
+    EnviarMensaje(av,robot1)
+    EnviarMensaje(ca,robot1)
+    EnviarMensaje(av,robot2)
+    EnviarMensaje(ca,robot2)
+    EnviarMensaje(av,robot3)
+    EnviarMensaje(ca,robot3)
+    EnviarMensaje(av,robot4)
+    EnviarMensaje(ca,robot4)    
+  fin
+  
+  proceso tomarYVolver(E av:numero ; E ca:numero ; E avI:numero ; E caI:numero ; ES hayFlor:boolean ; E quienSoy:numero)
+  comenzar
+    BloquearEsquina(av,ca)
+    Pos(av,ca)
+    si HayFlorEnLaEsquina
+      tomarFlor
+    hayFlor:=HayFlorEnLaEsquina
+    EnviarMensaje(hayFlor,robotJ)
+    enviarOtrosR(hayFlor,quienSoy)  
+    EnviarMensaje(quienSoy,robotJ)
+    Pos(avI,caI)
+    LiberarEsquina(av,ca)  
+  fin
+  
+  proceso sumarCantFloresRobot(E quienSos:numero; ES cantFloresR1:numero ; ES cantFloresR2:numero ; ES cantFloresR3:numero ; ES cantFloresR4:numero)
+  comenzar
+    si quienSos=1
+      cantFloresR1:=cantFloresR1+1
+    sino
+      si quienSos=2
+        cantFloresR2:=cantFloresR2+1
+      sino
+        si quienSos=3
+          cantFloresR3:=cantFloresR3+1  
+        sino
+          si quienSos=4
+            cantFloresR4:=cantFloresR4+1
+  fin
+  
+  proceso calcularMax(E cant1:numero ; E cant2:numero ; E cant3:numero ; E cant4:numero ; ES maxR:numero)
+  comenzar
+    si cant1>=cant2
+      si cant1>=cant3
+        si cant1>=cant4
+          maxR:=1
+        sino
+          maxR:=4
+      sino
+        si cant3>cant4
+          maxR:=3
+    sino
+      si cant2>=cant3
+        si cant2>=cant4
+          maxR:=2
+        sino
+          maxR:=4
+      sino
+        si cant3>=cant4
+          maxR:=3
+        sino
+          maxR:=4
+  fin
+  
+areas
+  areaF: AreaC (2,2,10,10)
+  esqJ: AreaP (1,1,1,1)
+  esqR1: AreaP (2,1,2,1)
+  esqR2: AreaP (3,1,3,1)
+  esqR3: AreaP (4,1,4,1)
+  esqR4: AreaP (5,1,5,1)
+  
+robots
+  robot tipoJ
+  variables
+    av:numero
+    ca:numero
+    hayFlor:boolean
+    cantFloresR1:numero
+    cantFloresR2:numero
+    cantFloresR3:numero
+    cantFloresR4:numero
+    quienSos:numero
+    maxR:numero
+  comenzar  
+    cantFloresR1:=0
+    cantFloresR2:=0
+    cantFloresR3:=0
+    cantFloresR4:=0
+    Random(av,2,10)
+    Random(ca,2,10)
+    enviarEsqRobots(av,ca)
+    RecibirMensaje(hayFlor,*)
+    RecibirMensaje(quienSos,*)        
+    mientras hayFlor
+      sumarCantFloresRobot(quienSos,cantFloresR1,cantFloresR2,cantFloresR3,cantFloresR4)
+      RecibirMensaje(hayFlor,*)
+      RecibirMensaje(quienSos,*)        
+    calcularMax(cantFloresR1,cantFloresR2,cantFloresR3,cantFloresR4,maxR)
+    Informar(maxR)
+  fin
+  
+  robot tipo1
+  variables
+    av:numero
+    ca:numero
+    avI:numero
+    caI:numero
+    hayFlor:boolean
+  comenzar
+    avI:=PosAv
+    caI:=PosCa
+    RecibirMensaje(av,robotJ)
+    RecibirMensaje(ca,robotJ)
+    tomarYVolver(av,ca,avI,caI,hayFlor,1)
+    mientras hayFlor
+      tomarYVolver(av,ca,avI,caI,hayFlor,1)
+  fin
+  
+  robot tipo2
+  variables
+    av:numero
+    ca:numero
+    avI:numero
+    caI:numero
+    hayFlor:boolean
+  comenzar
+    avI:=PosAv
+    caI:=PosCa
+    RecibirMensaje(av,robotJ)
+    RecibirMensaje(ca,robotJ)
+    tomarYVolver(av,ca,avI,caI,hayFlor,2)
+    mientras hayFlor
+      tomarYVolver(av,ca,avI,caI,hayFlor,2)
+  fin
+  
+  robot tipo3
+  variables
+    av:numero
+    ca:numero
+    avI:numero
+    caI:numero
+    hayFlor:boolean
+  comenzar
+    avI:=PosAv
+    caI:=PosCa
+    RecibirMensaje(av,robotJ)
+    RecibirMensaje(ca,robotJ)
+    tomarYVolver(av,ca,avI,caI,hayFlor,3)
+    mientras hayFlor
+      tomarYVolver(av,ca,avI,caI,hayFlor,3)
+  fin
+  
+  robot tipo4
+  variables
+    av:numero
+    ca:numero
+    avI:numero
+    caI:numero
+    hayFlor:boolean
+  comenzar
+    avI:=PosAv
+    caI:=PosCa
+    RecibirMensaje(av,robotJ)
+    RecibirMensaje(ca,robotJ)
+    tomarYVolver(av,ca,avI,caI,hayFlor,4)
+    mientras hayFlor
+      tomarYVolver(av,ca,avI,caI,hayFlor,4)
+  fin
+  
+variables
+  robotJ:tipoJ
+  robot1:tipo1
+  robot2:tipo2
+  robot3:tipo3
+  robot4: tipo4
+  
+comenzar
+  AsignarArea(robotJ, esqJ)
+  AsignarArea(robot1, areaF)
+  AsignarArea(robot1, esqR1)
+  AsignarArea(robot2, areaF)
+  AsignarArea(robot2, esqR2)
+  AsignarArea(robot3, areaF)
+  AsignarArea(robot3, esqR3)
+  AsignarArea(robot4, areaF)
+  AsignarArea(robot4, esqR4)
+  Iniciar(robotJ, 1,1)
+  Iniciar(robot1, 2,1)
+  Iniciar(robot2, 3,1)
+  Iniciar(robot3, 4,1)
+  Iniciar(robot4, 5,1)
+fin

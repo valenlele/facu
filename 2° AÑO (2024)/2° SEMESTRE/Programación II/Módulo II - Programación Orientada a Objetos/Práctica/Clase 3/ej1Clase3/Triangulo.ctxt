@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Triangulo
+comment1.params=
+comment1.target=double\ getL1()
+comment10.params=unColorLinea
+comment10.target=void\ setColorLinea(java.lang.String)
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=double\ getL2()
+comment3.params=
+comment3.target=double\ getL3()
+comment4.params=
+comment4.target=java.lang.String\ getColorRelleno()
+comment5.params=
+comment5.target=java.lang.String\ getColorLinea()
+comment6.params=unl1
+comment6.target=void\ setL1(double)
+comment7.params=unl2
+comment7.target=void\ setL2(double)
+comment8.params=unl3
+comment8.target=void\ setL3(double)
+comment9.params=unColorRelleno
+comment9.target=void\ setColorRelleno(java.lang.String)
+numComments=12

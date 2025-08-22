@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ej3a.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ej3b"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="23" Y="9"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ej3b.lpr"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="1">
+      <Position>
+        <Filename Value="ej3a.lpr"/>
+        <Caret Line="20" Column="41" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ej3a.lpr"/>
+        <Caret Line="30" Column="18" TopLine="15"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
